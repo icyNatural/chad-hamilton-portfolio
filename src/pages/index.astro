@@ -1,11 +1,221 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<main>
+  <section class="hero">
+    <p class="eyebrow">CYBERSECURITY | AUTOMATION | SYSTEMS DEVELOPMENT</p>
+
+    <h1>Chad <span>Hamilton</span></h1>
+
+    <p class="intro">
+      Building adaptive systems across cybersecurity, automation, infrastructure,
+      semantic tooling, physiological state modeling, and intelligent workflow design.
+    </p>
+
+    <div class="buttons">
+      <a href="#projects">View Systems</a>
+      <a href="https://github.com/icyNatural">GitHub</a>
+    </div>
+  </section>
+
+  <section id="projects" class="grid">
+    <div class="card">
+      <h2>Energy Engine</h2>
+      <p>
+        A physiological and behavioral state system that interprets human energy patterns
+        using sleep, HRV, activity, recovery, and temporal phase modeling.
+      </p>
+      <p>
+        Focused on adaptive interpretation through evolving personal baselines,
+        recovery patterns, and contextual state awareness rather than static averages alone.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Inquiry Engine</h2>
+      <p>
+        An adaptive inquiry and reasoning system designed to preserve continuity
+        of thought across time.
+      </p>
+      <p>
+        Focused on semantic retrieval, conceptual synthesis, long-term pattern tracking,
+        and structured questioning rather than isolated AI conversations.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Potent Lexicon</h2>
+      <p>
+        A semantic language system for mapping words by sound, texture, atmosphere,
+        symbolism, and meaning.
+      </p>
+      <p>
+        Approaches language as dynamic cognitive structure shaped by association,
+        perception, rhythm, context, and interpretive weight.
+      </p>
+    </div>
+  </section>
+
+  <section class="technical">
+    <p class="eyebrow">TECHNICAL BASE</p>
+
+    <div class="base-grid">
+      <div>IT Support</div>
+      <div>Cybersecurity Research</div>
+      <div>PowerShell Automation</div>
+      <div>Systems Documentation</div>
+      <div>HTML / CSS / JavaScript</div>
+      <div>GitHub Pages</div>
+    </div>
+  </section>
+</main>
+
+<style>
+  :root {
+    --bg: #070b17;
+    --panel: rgba(17, 24, 39, 0.72);
+    --border: rgba(139, 92, 246, 0.16);
+    --text: #eef2ff;
+    --muted: #a5b4d4;
+    --primary: #8b5cf6;
+    --secondary: #60a5fa;
+    --glow: 0 0 24px rgba(96,165,250,0.08), 0 0 60px rgba(139,92,246,0.08);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background:
+      radial-gradient(circle at top right, rgba(96,165,250,0.12), transparent 30%),
+      radial-gradient(circle at left, rgba(139,92,246,0.10), transparent 35%),
+      linear-gradient(to bottom, #060816, #02040b);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+  }
+
+  main {
+    min-height: 100vh;
+    padding: 90px 10%;
+  }
+
+  .hero {
+    max-width: 920px;
+    margin-bottom: 90px;
+  }
+
+  .eyebrow {
+    color: var(--secondary);
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: clamp(72px, 10vw, 118px);
+    margin: 24px 0 18px;
+    line-height: 0.9;
+    letter-spacing: -4px;
+  }
+
+  h1 span {
+    background: linear-gradient(to right, #c4b5fd, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .intro {
+    font-size: 22px;
+    color: var(--muted);
+    max-width: 760px;
+    line-height: 1.7;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 42px;
+    flex-wrap: wrap;
+  }
+
+  .buttons a {
+    text-decoration: none;
+    border-radius: 16px;
+    padding: 14px 24px;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+  }
+
+  .buttons a:first-child {
+    color: white;
+    background: linear-gradient(to right, #8b5cf6, #3b82f6);
+    box-shadow: var(--glow);
+  }
+
+  .buttons a:last-child {
+    color: white;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .buttons a:hover {
+    transform: translateY(-3px);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 26px;
+  }
+
+  .card {
+    border-radius: 30px;
+    padding: 34px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(18px);
+    box-shadow: var(--glow);
+    transition: transform 0.25s ease, border 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(139,92,246,0.28);
+    box-shadow: 0 0 30px rgba(96,165,250,0.12), 0 0 80px rgba(139,92,246,0.10);
+  }
+
+  .card h2 {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #dbeafe;
+  }
+
+  .card p {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .technical {
+    margin-top: 90px;
+  }
+
+  .base-grid {
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    max-width: 900px;
+  }
+
+  .base-grid div {
+    color: #dbeafe;
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(96,165,250,0.14);
+    border-radius: 999px;
+    padding: 12px 18px;
+    font-weight: 700;
+  }
+</style>
