@@ -1,23 +1,110 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import '../styles/global.css';
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "Chad Hamilton // Adaptive Systems Architecture", 
+  description = "Building adaptive systems across cybersecurity, automation, infrastructure, semantic tooling, physiological state modeling, and human-system design."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+  </head>
+  <body class="bg-cyber-bg text-cyber-text font-sans antialiased min-h-screen relative flex flex-col justify-between selection:bg-cyber-accent/25 selection:text-white">
+    <!-- Atmospheric Background Layers -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      <!-- Grid Overlay -->
+      <div class="absolute inset-0 grid-overlay opacity-40"></div>
+      
+      <!-- Radial Glows -->
+      <div class="absolute top-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full ambient-glow-1"></div>
+      <div class="absolute bottom-[-15%] left-[-10%] w-[55vw] h-[55vw] rounded-full ambient-glow-2"></div>
+      <div class="absolute top-[30%] left-[20%] w-[45vw] h-[45vw] rounded-full ambient-glow-1 opacity-50"></div>
+      
+      <!-- Subtle top horizontal rule -->
+      <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-cyber-accent/20 to-transparent"></div>
+    </div>
+
+    <!-- Layout Frame -->
+    <div class="relative z-10 flex flex-col min-h-screen">
+      <!-- Header / Nav -->
+      <header class="border-b border-cyber-border backdrop-blur-md sticky top-0 z-50 bg-cyber-bg/75">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+          <a href="/" class="flex items-center gap-3 group">
+            <span class="h-2.5 w-2.5 rounded-full bg-cyber-accent shadow-[0_0_8px_var(--color-cyber-accent)]"></span>
+            <span class="font-heading font-bold tracking-tight text-sm text-cyber-text group-hover:text-cyber-accent transition-colors">
+              CHAD HAMILTON
+            </span>
+            <span class="font-mono text-[10px] text-cyber-text-muted border border-cyber-border px-1.5 py-0.5 rounded uppercase hidden sm:inline-block">
+              SYSTEMS.ARC
+            </span>
+          </a>
+
+          <nav class="flex items-center gap-6 font-mono text-xs text-cyber-text-muted">
+            <a href="/#systems" class="hover:text-cyber-text hover:underline underline-offset-4 decoration-cyber-accent/50 transition-colors">
+              [SYSTEMS]
+            </a>
+            <a href="/#capabilities" class="hover:text-cyber-text hover:underline underline-offset-4 decoration-cyber-accent/50 transition-colors">
+              [CAPABILITIES]
+            </a>
+            <a href="/#research" class="hover:text-cyber-text hover:underline underline-offset-4 decoration-cyber-accent/50 transition-colors">
+              [RESEARCH]
+            </a>
+            <a href="https://github.com/icyNatural" target="_blank" rel="noopener noreferrer" class="hover:text-cyber-text flex items-center gap-1.5 transition-colors">
+              [GITHUB] <span class="text-[9px]">↗</span>
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Main Slot -->
+      <main class="flex-grow">
+        <slot />
+      </main>
+
+      <!-- Footer -->
+      <footer class="border-t border-cyber-border bg-cyber-bg-alt py-12 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 font-mono text-xs text-cyber-text-muted">
+          <div>
+            <p>© {new Date().getFullYear()} Chad Hamilton. All systems operational.</p>
+            <p class="text-[10px] mt-1 opacity-70">Adaptive Systems Architecture & Research</p>
+          </div>
+          <div class="flex gap-6">
+            <a href="mailto:Chadnatural1@gmail.com" class="hover:text-cyber-text transition-colors">
+              [CONTACT.EMAIL]
+            </a>
+            <a href="https://github.com/icyNatural" target="_blank" rel="noopener noreferrer" class="hover:text-cyber-text transition-colors">
+              [GITHUB.ARCHIVE]
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

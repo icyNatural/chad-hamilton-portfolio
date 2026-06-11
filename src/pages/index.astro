@@ -1,223 +1,358 @@
 ---
+import Layout from '../layouts/Layout.astro';
+
+// Combined skills/capabilities from index.astro and Portfolio.jsx
+const capabilities = [
+  {
+    category: "Development",
+    items: ["Python", "JavaScript", "HTML / CSS", "Astro", "PowerShell Automation"]
+  },
+  {
+    category: "Security",
+    items: ["Cybersecurity Research", "System Hardening", "Threat Analysis", "Workflow Automation"]
+  },
+  {
+    category: "Infrastructure",
+    items: ["Linux", "Windows", "Networking", "Virtualization", "Active Directory", "GitHub Pages"]
+  },
+  {
+    category: "Research",
+    items: ["Semantic Systems", "Linguistics", "Human-Computer Interaction", "Energy Modeling", "Systems Documentation"]
+  }
+];
+
+const coreSystems = [
+  {
+    id: "SYS-01",
+    title: "Energy Engine",
+    href: "/projects/energy-engine/",
+    description1: "A physiological and behavioral state system that interprets human energy patterns using sleep, HRV, activity, recovery, and temporal phase modeling.",
+    description2: "Focused on adaptive interpretation through evolving personal baselines, recovery patterns, and contextual state awareness rather than static averages alone.",
+    stack: ["Python", "Astro", "JSON", "Physiological Modeling", "Recovery Dynamics"],
+    image: "/images/energy-engine/energyengine.png"
+  },
+  {
+    id: "SYS-02",
+    title: "Inquiry Engine",
+    href: "/projects/inquiry-engine/",
+    description1: "An adaptive inquiry and reasoning system designed to preserve continuity of thought across time.",
+    description2: "Focused on semantic retrieval, conceptual synthesis, long-term pattern tracking, and structured questioning rather than isolated AI conversations.",
+    stack: ["Python", "ChromaDB", "Embeddings", "AI Reasoners", "Contextual Memory"],
+    image: "/images/inquiry-engine/inquiryengine.png"
+  },
+  {
+    id: "SYS-03",
+    title: "Potent Lexicon",
+    href: "/projects/potent-lexicon/",
+    description1: "A semantic language system for mapping words by sound, texture, atmosphere, symbolism, and meaning.",
+    description2: "Approaches language as dynamic cognitive structure shaped by association, perception, rhythm, context, and interpretive weight.",
+    stack: ["Linguistics", "AI", "Semantic Systems", "Phonosemantics", "Cognitive Structure"],
+    image: "/images/potent-lexicon/potentlexicon.png"
+  }
+];
+
+const personalSystems = [
+  {
+    title: "Creative Work & Art",
+    description: "Explorations of digital medium, structural aesthetics, and emotional atmospheres. Translating semantic structures into visual formats.",
+    tag: "AESTHETICS"
+  },
+  {
+    title: "Physical & Environment Design",
+    description: "Structuring physical spaces, environmental ergonomics, physical learning setups, and hardware workstations for sustained attention.",
+    tag: "ENVIRONMENTS"
+  },
+  {
+    title: "Experimentation & Learning",
+    description: "Knowledge compilation systems, rapid prototyping frameworks, and multi-domain absorption patterns.",
+    tag: "COGNITION"
+  },
+  {
+    title: "Non-Software Projects",
+    description: "Systems modeling, physiological state tracking structures, workflow design, and offline automation mechanisms.",
+    tag: "ANALOG.SYSTEMS"
+  }
+];
+
+const researchLogs = [
+  {
+    code: "LOG-58",
+    topic: "Baseline Temporal Phase Modeling",
+    summary: "Personal physiological tracking reveals static averages obscure actual state readiness. Transitioning indicators to baseline drift intervals based on sleep architecture cycles."
+  },
+  {
+    code: "LOG-71",
+    topic: "Phonosemantic Weight Mapping",
+    summary: "Mapping linguistic textures shows sound frequency patterns map directly to cognitive atmospheric weight. Potent Lexicon models these associations mathematically."
+  },
+  {
+    code: "LOG-94",
+    topic: "Structured Inquiry Continuity",
+    summary: "LLM contextual drifts are corrected by wrapping prompt systems in semantic search engines. Inquiry Engine creates persistent conceptual threads across sessions."
+  }
+];
 ---
 
-<main>
-  <section class="hero">
-    <p class="eyebrow">CYBERSECURITY | AUTOMATION | SYSTEMS DEVELOPMENT</p>
+<Layout title="Chad Hamilton // Systems Architecture & Research">
+  <!-- Hero Section -->
+  <section class="max-w-6xl mx-auto px-6 pt-24 pb-16 relative">
+    <div class="max-w-4xl">
+      <div class="inline-flex items-center gap-2 border border-cyber-accent/20 bg-cyber-accent-dim px-3 py-1 rounded font-mono text-[10px] text-cyber-accent tracking-wider mb-6">
+        <span class="h-1.5 w-1.5 rounded-full bg-cyber-accent animate-pulse"></span>
+        SYSTEM INITIALIZED: ACTIVE ARCHIVE
+      </div>
+      
+      <h1 class="font-heading font-extrabold text-5xl md:text-8xl tracking-tight leading-none mb-6">
+        Chad <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-accent via-cyber-purple to-cyber-text">Hamilton</span>
+      </h1>
+      
+      <p class="font-mono text-xs text-cyber-text-muted mb-8 tracking-wider uppercase">
+        Cybersecurity // Automation // Infrastructure // Semantic Tooling // Human-System Design
+      </p>
 
-    <h1>Chad <span>Hamilton</span></h1>
+      <p class="text-lg md:text-xl text-cyber-text-muted leading-relaxed max-w-3xl mb-12">
+        Building adaptive systems across cybersecurity, automation, infrastructure, semantic tooling, physiological state modeling, intelligent workflow design, language systems, and human-system design.
+      </p>
 
-    <p class="intro">
-      Building adaptive systems across cybersecurity, automation, infrastructure,
-      semantic tooling, physiological state modeling, and intelligent workflow design.
-    </p>
-
-    <div class="buttons">
-      <a href="#projects">View Systems</a>
-      <a href="https://github.com/icyNatural">GitHub</a>
+      <div class="flex gap-4">
+        <a href="#systems" class="bg-cyber-accent text-cyber-bg font-mono font-bold text-xs px-6 py-3 rounded hover:bg-white transition-colors duration-250">
+          [EXPLORE.SYSTEMS]
+        </a>
+        <a href="https://github.com/icyNatural" target="_blank" rel="noopener noreferrer" class="border border-cyber-border hover:border-cyber-border-hover bg-cyber-card font-mono text-xs px-6 py-3 rounded transition-colors duration-250">
+          [GITHUB.ARCHIVE]
+        </a>
+      </div>
     </div>
   </section>
 
-  <section id="projects" class="grid">
-    <a class="card" href="/projects/energy-engine/">
-      <h2>Energy Engine</h2>
-      <p>
-        A physiological and behavioral state system that interprets human energy patterns
-        using sleep, HRV, activity, recovery, and temporal phase modeling.
-      </p>
-      <p>
-        Focused on adaptive interpretation through evolving personal baselines,
-        recovery patterns, and contextual state awareness rather than static averages alone.
-      </p>
-    </div>
-
-    <a class="card" href="/projects/energy-engine/">
-      <h2>Inquiry Engine</h2>
-      <p>
-        An adaptive inquiry and reasoning system designed to preserve continuity
-        of thought across time.
-      </p>
-      <p>
-        Focused on semantic retrieval, conceptual synthesis, long-term pattern tracking,
-        and structured questioning rather than isolated AI conversations.
-      </p>
-    </div>
-
-    <a class="card" href="/projects/energy-engine/">
-      <h2>Potent Lexicon</h2>
-      <p>
-        A semantic language system for mapping words by sound, texture, atmosphere,
-        symbolism, and meaning.
-      </p>
-      <p>
-        Approaches language as dynamic cognitive structure shaped by association,
-        perception, rhythm, context, and interpretive weight.
-      </p>
+  <!-- About Section -->
+  <section class="border-t border-cyber-border bg-cyber-bg-alt/50 py-20 relative">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-start">
+      <div class="md:col-span-4 font-mono text-xs text-cyber-text-muted uppercase tracking-widest sticky top-24">
+        // IDENTITY & FOCUS
+      </div>
+      <div class="md:col-span-8 space-y-6">
+        <h2 class="font-heading font-bold text-2xl md:text-3xl text-cyber-text">
+          Focusing on the intersections of automation, software architecture, security, and human experience.
+        </h2>
+        <p class="text-cyber-text-muted leading-relaxed text-base md:text-lg">
+          My work focuses on automation, software systems, cybersecurity concepts, semantic tooling, and interface design. I enjoy building projects that turn technical ideas into usable systems and experiences.
+        </p>
+        <p class="text-cyber-text-muted leading-relaxed text-base md:text-lg">
+          I build platforms that process human bio-telemetry, manage logic flows, map sound-to-meaning matrices, and script high-efficiency server tasks. I view computing not as separate files, but as structured, interactive environments.
+        </p>
+      </div>
     </div>
   </section>
 
-  <section class="technical">
-    <p class="eyebrow">TECHNICAL BASE</p>
+  <!-- Core Systems Section (Exhibits) -->
+  <section id="systems" class="border-t border-cyber-border py-24 relative">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-16">
+        <p class="font-mono text-xs text-cyber-accent uppercase tracking-widest mb-3">// EXHIBIT SPACE 01</p>
+        <h2 class="font-heading font-extrabold text-3xl md:text-5xl text-cyber-text">Core Systems</h2>
+        <p class="text-cyber-text-muted font-mono text-xs mt-2">Core software architectures mapped and visualised.</p>
+      </div>
 
-    <div class="base-grid">
-      <div>IT Support</div>
-      <div>Cybersecurity Research</div>
-      <div>PowerShell Automation</div>
-      <div>Systems Documentation</div>
-      <div>HTML / CSS / JavaScript</div>
-      <div>GitHub Pages</div>
+      <div class="space-y-32">
+        {coreSystems.map((system) => (
+          <div class="grid lg:grid-cols-12 gap-12 items-center">
+            <!-- Details -->
+            <div class="lg:col-span-5 space-y-6 order-2 lg:order-1">
+              <div class="flex items-center gap-3">
+                <span class="font-mono text-xs text-cyber-accent bg-cyber-accent-dim px-2 py-0.5 rounded">
+                  {system.id}
+                </span>
+                <span class="font-mono text-[10px] text-cyber-text-muted tracking-wider uppercase">
+                  ACTIVE SUBSYSTEM
+                </span>
+              </div>
+              
+              <h3 class="font-heading font-bold text-3xl md:text-4xl text-cyber-text">
+                {system.title}
+              </h3>
+
+              <div class="space-y-4 text-cyber-text-muted leading-relaxed">
+                <p>{system.description1}</p>
+                <p>{system.description2}</p>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="flex flex-wrap gap-2 pt-2">
+                {system.stack.map((tech) => (
+                  <span class="font-mono text-[11px] bg-cyber-card border border-cyber-border px-2.5 py-1 rounded text-cyber-text-muted">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div class="pt-4">
+                <a 
+                  href={system.href} 
+                  class="inline-flex items-center gap-2 font-mono text-xs text-cyber-accent hover:text-white transition-colors group"
+                >
+                  [ENTER SYSTEM ARCHIVE] 
+                  <span class="group-hover:translate-x-1.5 transition-transform duration-250">&rarr;</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Screenshot Viewport -->
+            <div class="lg:col-span-7 order-1 lg:order-2">
+              <div class="border border-cyber-border rounded-xl bg-cyber-bg shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden group hover:border-cyber-accent/30 transition-all duration-300">
+                <!-- MacOS Window Chrome -->
+                <div class="bg-cyber-bg-alt border-b border-cyber-border px-4 py-3 flex items-center justify-between">
+                  <div class="flex gap-1.5">
+                    <span class="h-3 w-3 rounded-full bg-white/10"></span>
+                    <span class="h-3 w-3 rounded-full bg-white/10"></span>
+                    <span class="h-3 w-3 rounded-full bg-white/10"></span>
+                  </div>
+                  <span class="font-mono text-[10px] text-cyber-text-muted tracking-widest uppercase">
+                    {system.title.toLowerCase().replace(" ", "_")}.png
+                  </span>
+                  <div class="w-12"></div>
+                </div>
+                
+                <!-- Large Image Display -->
+                <div class="relative overflow-hidden aspect-[16/10] bg-black/40">
+                  <img 
+                    src={system.image} 
+                    alt={`${system.title} System Screenshot`} 
+                    class="w-full h-full object-cover object-top hover:scale-[1.02] transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
-</main>
 
-<style>
-  :root {
-    --bg: #070b17;
-    --panel: rgba(17, 24, 39, 0.72);
-    --border: rgba(139, 92, 246, 0.16);
-    --text: #eef2ff;
-    --muted: #a5b4d4;
-    --primary: #8b5cf6;
-    --secondary: #60a5fa;
-    --glow: 0 0 24px rgba(96,165,250,0.08), 0 0 60px rgba(139,92,246,0.08);
-  }
+  <!-- Personal Systems Section -->
+  <section class="border-t border-cyber-border bg-cyber-bg-alt/30 py-24 relative">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-16">
+        <p class="font-mono text-xs text-cyber-purple uppercase tracking-widest mb-3">// EXHIBIT SPACE 02</p>
+        <h2 class="font-heading font-extrabold text-3xl md:text-5xl text-cyber-text">Personal Systems</h2>
+        <p class="text-cyber-text-muted font-mono text-xs mt-2">Creative paradigms, environment design, and learning systems outside traditional software.</p>
+      </div>
 
-  * { box-sizing: border-box; }
+      <div class="grid md:grid-cols-2 gap-6">
+        {personalSystems.map((system) => (
+          <div class="border border-cyber-border bg-cyber-card rounded-xl p-8 relative overflow-hidden group hover:border-cyber-purple/40 transition-all duration-300">
+            <!-- Decorative atmospheric light inside card -->
+            <div class="absolute top-0 right-0 w-24 h-24 rounded-full bg-cyber-purple/5 blur-2xl group-hover:bg-cyber-purple/10 transition-all"></div>
+            
+            <div class="flex justify-between items-start mb-6">
+              <span class="font-mono text-[10px] text-cyber-purple border border-cyber-purple/20 px-2 py-0.5 rounded bg-cyber-purple/5">
+                {system.tag}
+              </span>
+              <span class="font-mono text-[10px] text-cyber-text-muted">STATE: LOGGED</span>
+            </div>
 
-  body {
-    margin: 0;
-    background:
-      radial-gradient(circle at top right, rgba(96,165,250,0.12), transparent 30%),
-      radial-gradient(circle at left, rgba(139,92,246,0.10), transparent 35%),
-      linear-gradient(to bottom, #060816, #02040b);
-    color: var(--text);
-    font-family: Arial, sans-serif;
-  }
+            <h3 class="font-heading font-bold text-xl text-cyber-text mb-4 group-hover:text-cyber-purple transition-colors">
+              {system.title}
+            </h3>
 
-  main {
-    min-height: 100vh;
-    padding: 90px 10%;
-  }
+            <p class="text-cyber-text-muted leading-relaxed text-sm">
+              {system.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-  .hero {
-    max-width: 920px;
-    margin-bottom: 90px;
-  }
+  <!-- Technical Base / Capability Map -->
+  <section id="capabilities" class="border-t border-cyber-border py-24 relative">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-16">
+        <p class="font-mono text-xs text-cyber-accent uppercase tracking-widest mb-3">// CORE DESIGNATION</p>
+        <h2 class="font-heading font-extrabold text-3xl md:text-5xl text-cyber-text">Capability Map</h2>
+        <p class="text-cyber-text-muted font-mono text-xs mt-2">Systems automation, security research, infrastructure development, and cognitive layers.</p>
+      </div>
 
-  .eyebrow {
-    color: var(--secondary);
-    letter-spacing: 4px;
-    font-size: 13px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {capabilities.map((cap) => (
+          <div class="border border-cyber-border bg-cyber-card/50 rounded-xl p-6 relative">
+            <h3 class="font-heading font-semibold text-lg text-cyber-accent mb-6 border-b border-cyber-border pb-3">
+              {cap.category}
+            </h3>
+            
+            <ul class="space-y-4">
+              {cap.items.map((item) => (
+                <li class="flex items-start gap-2.5">
+                  <span class="h-1.5 w-1.5 rounded-full bg-cyber-accent/60 mt-2"></span>
+                  <span class="font-mono text-xs text-cyber-text-muted">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-  h1 {
-    font-size: clamp(72px, 10vw, 118px);
-    margin: 24px 0 18px;
-    line-height: 0.9;
-    letter-spacing: -4px;
-  }
+  <!-- Research Layer Section -->
+  <section id="research" class="border-t border-cyber-border bg-cyber-bg-alt/25 py-24 relative">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-16">
+        <p class="font-mono text-xs text-cyber-purple uppercase tracking-widest mb-3">// SYSTEM RECORDS</p>
+        <h2 class="font-heading font-extrabold text-3xl md:text-5xl text-cyber-text">Research Layer</h2>
+        <p class="text-cyber-text-muted font-mono text-xs mt-2">Exploratory records documenting semantic architectures and physical baselines.</p>
+      </div>
 
-  h1 span {
-    background: linear-gradient(to right, #c4b5fd, #60a5fa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+      <div class="space-y-6">
+        {researchLogs.map((log) => (
+          <div class="border border-cyber-border/80 bg-cyber-card rounded-lg p-6 flex flex-col md:flex-row gap-6 items-start hover:border-cyber-text-muted/20 transition-all duration-300">
+            <div class="font-mono text-xs text-cyber-purple border border-cyber-purple/20 bg-cyber-purple/5 px-2 py-0.5 rounded shrink-0">
+              {log.code}
+            </div>
+            <div class="space-y-2">
+              <h3 class="font-heading font-bold text-base text-cyber-text">
+                {log.topic}
+              </h3>
+              <p class="text-cyber-text-muted text-sm leading-relaxed max-w-4xl">
+                {log.summary}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-  .intro {
-    font-size: 22px;
-    color: var(--muted);
-    max-width: 760px;
-    line-height: 1.7;
-  }
+  <!-- Contact & Connection Section -->
+  <section class="border-t border-cyber-border py-24 relative overflow-hidden bg-cyber-bg-alt/30">
+    <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
+      <p class="font-mono text-xs text-cyber-accent uppercase tracking-widest">// CONNECTION NODE</p>
+      
+      <h2 class="font-heading font-extrabold text-3xl md:text-5xl text-cyber-text">
+        Establish Contact
+      </h2>
+      
+      <p class="text-cyber-text-muted leading-relaxed max-w-2xl mx-auto">
+        Feel free to reach out to explore potential systems collaborations, ask about architecture, or review active code structures.
+      </p>
 
-  .buttons {
-    display: flex;
-    gap: 16px;
-    margin-top: 42px;
-    flex-wrap: wrap;
-  }
-
-  .buttons a {
-    text-decoration: none;
-    border-radius: 16px;
-    padding: 14px 24px;
-    font-weight: bold;
-    transition: transform 0.2s ease;
-  }
-
-  .buttons a:first-child {
-    color: white;
-    background: linear-gradient(to right, #8b5cf6, #3b82f6);
-    box-shadow: var(--glow);
-  }
-
-  .buttons a:last-child {
-    color: white;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-  }
-
-  .buttons a:hover {
-    transform: translateY(-3px);
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 26px;
-  }
-
-  .card {
-    border-radius: 30px;
-    padding: 34px;
-    background: var(--panel);
-    border: 1px solid var(--border);
-    backdrop-filter: blur(18px);
-    box-shadow: var(--glow);
-    transition: transform 0.25s ease, border 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  .card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(139,92,246,0.28);
-    box-shadow: 0 0 30px rgba(96,165,250,0.12), 0 0 80px rgba(139,92,246,0.10);
-  }
-
-  .card h2 {
-    font-size: 30px;
-    margin-top: 0;
-    margin-bottom: 16px;
-    color: #dbeafe;
-  }
-
-  .card p {
-    color: var(--muted);
-    font-size: 16px;
-    line-height: 1.7;
-  }
-
-  .technical {
-    margin-top: 90px;
-  }
-
-  .base-grid {
-    margin-top: 22px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    max-width: 900px;
-  }
-
-  .base-grid div {
-    color: #dbeafe;
-    background: rgba(255,255,255,0.045);
-    border: 1px solid rgba(96,165,250,0.14);
-    border-radius: 999px;
-    padding: 12px 18px;
-    font-weight: 700;
-  }
-</style>
-
-
+      <div class="flex justify-center gap-4 pt-4">
+        <a 
+          href="mailto:Chadnatural1@gmail.com" 
+          class="bg-cyber-accent text-cyber-bg font-mono font-bold text-xs px-8 py-4 rounded hover:bg-white transition-colors duration-200"
+        >
+          [SEND.EMAIL]
+        </a>
+        <a 
+          href="https://github.com/icyNatural" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="border border-cyber-border bg-cyber-card font-mono text-xs px-8 py-4 rounded hover:border-cyber-accent/40 transition-colors duration-200"
+        >
+          [CONNECT.GITHUB]
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
