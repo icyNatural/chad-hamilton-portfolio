@@ -1,0 +1,54 @@
+[
+  {
+    "slug": "raw-reality",
+    "url": "https://reality.icynatural.now",
+    "viewport": "1440x1000",
+    "state": "landing",
+    "capturedAt": "2026-09-20T14:27:04.819Z",
+    "outputPath": "public/images/projects/raw-reality/desktop-landing.png",
+    "status": 200,
+    "ok": true,
+    "title": "Raw Reality — capture before you interpret",
+    "finalUrl": "https://reality.icynatural.now/",
+    "headings": [],
+    "controls": [
+      "export archive",
+      "save to archive · ⌘↵"
+    ],
+    "bodyText": "RAW REALITY — EXPORT ARCHIVE LISTENING RAW · UNTOUCHED SAVE TO ARCHIVE · ⌘↵ the observatory is open. WAITING FOR THE FIRST FRAGMENT ENTRIES REMAIN SACRED · NOTHING REWRITTEN",
+    "dimensions": {
+      "viewportWidth": 1440,
+      "viewportHeight": 1000,
+      "scrollWidth": 1440,
+      "scrollHeight": 1085
+    },
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  {
+    "slug": "raw-reality",
+    "url": "https://reality.icynatural.now",
+    "viewport": "390x844",
+    "state": "landing",
+    "capturedAt": "2026-09-20T14:27:08.759Z",
+    "outputPath": "public/images/projects/raw-reality/mobile-landing.png",
+    "status": 200,
+    "ok": true,
+    "title": "Raw Reality — capture before you interpret",
+    "finalUrl": "https://reality.icynatural.now/",
+    "headings": [],
+    "controls": [
+      "export archive",
+      "save to archive · ⌘↵"
+    ],
+    "bodyText": "RAW REALITY — EXPORT ARCHIVE LISTENING RAW · UNTOUCHED SAVE TO ARCHIVE · ⌘↵ the observatory is open. WAITING FOR THE FIRST FRAGMENT ENTRIES REMAIN SACRED · NOTHING REWRITTEN",
+    "dimensions": {
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 1089
+    },
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+]

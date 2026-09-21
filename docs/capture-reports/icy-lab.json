@@ -1,0 +1,60 @@
+[
+  {
+    "slug": "icy-lab",
+    "url": "https://playground.icynatural.now",
+    "viewport": "1440x1000",
+    "state": "landing",
+    "capturedAt": "2026-09-20T14:27:13.033Z",
+    "outputPath": "public/images/projects/icy-lab/desktop-landing.png",
+    "status": 200,
+    "ok": true,
+    "title": "Icy Lab — AI Application Workshop",
+    "finalUrl": "https://playground.icynatural.now/",
+    "headings": [
+      "Start your first project"
+    ],
+    "controls": [
+      "No project",
+      "New project",
+      "Import from JSON"
+    ],
+    "bodyText": "ICY LAB No project Start your first project Create a blank Icy Lab project or import one from a previous JSON export. Everything lives on this device — your files, prompts, versions, and assets remain private and portable. New project Import from JSON",
+    "dimensions": {
+      "viewportWidth": 1440,
+      "viewportHeight": 1000,
+      "scrollWidth": 1440,
+      "scrollHeight": 1000
+    },
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  {
+    "slug": "icy-lab",
+    "url": "https://playground.icynatural.now",
+    "viewport": "390x844",
+    "state": "landing",
+    "capturedAt": "2026-09-20T14:27:16.544Z",
+    "outputPath": "public/images/projects/icy-lab/mobile-landing.png",
+    "status": 200,
+    "ok": true,
+    "title": "Icy Lab — AI Application Workshop",
+    "finalUrl": "https://playground.icynatural.now/",
+    "headings": [
+      "Start your first project"
+    ],
+    "controls": [
+      "No project",
+      "New project",
+      "Import from JSON"
+    ],
+    "bodyText": "ICY LAB No project Start your first project Create a blank Icy Lab project or import one from a previous JSON export. Everything lives on this device — your files, prompts, versions, and assets remain private and portable. New project Import from JSON",
+    "dimensions": {
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 844
+    },
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+]

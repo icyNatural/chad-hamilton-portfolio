@@ -1,0 +1,239 @@
+[
+  {
+    "state": "instruments",
+    "url": "https://phases.icynatural.now/energy",
+    "viewport": "1440x1000",
+    "capturedAt": "2026-09-20T11:47:46.719Z",
+    "outputPath": "public/images/projects/energy/desktop-instruments.png",
+    "status": 200,
+    "ok": true,
+    "finalUrl": "https://phases.icynatural.now/energy",
+    "title": "Instrument Room — Energy Engine",
+    "headings": [],
+    "controls": [
+      "PHYSIOLOGY INSTRUMENT ROOM",
+      "OBSERVATORY",
+      "INSTRUMENTS",
+      "ATLAS",
+      "SYSTEM",
+      "☾ SLEEP ARCHITECTURE · DEPTH · REM",
+      "♡ RECOVERY HRV · RESTING HEART",
+      "↗ ACTIVITY MOVEMENT LOAD",
+      "≋ RESPIRATION BREATH RHYTHM",
+      "◎ COGNITION RESERVED · FUTURE SIGNAL",
+      "Observatory",
+      "Instruments",
+      "Atlas",
+      "System"
+    ],
+    "bodyText": "PHYSIOLOGY\nINSTRUMENT ROOM\nOBSERVATORY\nINSTRUMENTS\nATLAS\nSYSTEM\n\nCALIBRATION DECK\n\nCURRENT CONTEXT\n\n—h\n\nSINCE AWAKENED ANCHOR\n\n☾\nSLEEP\nARCHITECTURE · DEPTH · REM\n♡\nRECOVERY\nHRV · RESTING HEART\n↗\nACTIVITY\nMOVEMENT LOAD\n≋\nRESPIRATION\nBREATH RHYTHM\n◎\nCOGNITION\nRESERVED · FUTURE SIGNAL\n\nCONNECTED SIGNALS\n\nBROWSER\n\nAutomatic signals need the Android build.\n\nThis preview runs in a browser, where Health Connect is not reachable. Manual override stays available; the Galaxy Watch link activates inside the Android app.\n\nSleep\nMANUAL · UNLINKED\nHeart rate\nMANUAL · UNLINKED\nActivity\nMANUAL · UNLINKED\nHRV\nMANUAL\nRespiration\nMANUAL",
+    "dimensions": {
+      "viewportWidth": 1440,
+      "viewportHeight": 1000,
+      "scrollWidth": 1440,
+      "scrollHeight": 1196
+    },
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  {
+    "state": "instruments",
+    "url": "https://phases.icynatural.now/energy",
+    "viewport": "390x844",
+    "capturedAt": "2026-09-20T11:47:50.783Z",
+    "outputPath": "public/images/projects/energy/mobile-instruments.png",
+    "status": 200,
+    "ok": true,
+    "finalUrl": "https://phases.icynatural.now/energy",
+    "title": "Instrument Room — Energy Engine",
+    "headings": [],
+    "controls": [
+      "Observatory",
+      "Instruments",
+      "Atlas",
+      "System",
+      "☾ SLEEP",
+      "♡ RECOVERY",
+      "↗ ACTIVITY",
+      "≋ RESPIRATION",
+      "◎ COGNITION",
+      "OBSERVATORY",
+      "INSTRUMENTS",
+      "ATLAS",
+      "SYSTEM"
+    ],
+    "bodyText": "CURRENT CONTEXT\n\n—h\n\nSINCE AWAKENED ANCHOR\n\n☾\nSLEEP\n♡\nRECOVERY\n↗\nACTIVITY\n≋\nRESPIRATION\n◎\nCOGNITION\n\nCONNECTED SIGNALS\n\nBROWSER\n\nAutomatic signals need the Android build.\n\nThis preview runs in a browser, where Health Connect is not reachable. Manual override stays available; the Galaxy Watch link activates inside the Android app.\n\nSleep\nMANUAL · UNLINKED\nHeart rate\nMANUAL · UNLINKED\nActivity\nMANUAL · UNLINKED\nHRV\nMANUAL\nRespiration\nMANUAL\nOBSERVATORY\nINSTRUMENTS\nATLAS\nSYSTEM",
+    "dimensions": {
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 904
+    },
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  {
+    "state": "atlas",
+    "url": "https://phases.icynatural.now/patterns",
+    "viewport": "1440x1000",
+    "capturedAt": "2026-09-20T11:47:55.311Z",
+    "outputPath": "public/images/projects/energy/desktop-atlas.png",
+    "status": 200,
+    "ok": true,
+    "finalUrl": "https://phases.icynatural.now/patterns",
+    "title": "Patterns — Energy Engine",
+    "headings": [
+      "Pattern Atlas"
+    ],
+    "controls": [
+      "PHYSIOLOGY Observatory",
+      "Observatory",
+      "Instruments",
+      "Atlas",
+      "System",
+      "Observatory",
+      "Instruments",
+      "Atlas",
+      "System"
+    ],
+    "bodyText": "PHYSIOLOGY\nObservatory\nObservatory\nInstruments\nAtlas\nSystem\n\nCARTOGRAPHY\n\nPattern Atlas\n\nA map of recurring traces drawn from your physiological signals over time.\n\nThe sky is empty. Log a few daily metrics on the Energy page to begin reading patterns.",
+    "dimensions": {
+      "viewportWidth": 1440,
+      "viewportHeight": 1000,
+      "scrollWidth": 1440,
+      "scrollHeight": 1000
+    },
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  {
+    "state": "atlas",
+    "url": "https://phases.icynatural.now/patterns",
+    "viewport": "390x844",
+    "capturedAt": "2026-09-20T11:47:59.233Z",
+    "outputPath": "public/images/projects/energy/mobile-atlas.png",
+    "status": 200,
+    "ok": true,
+    "finalUrl": "https://phases.icynatural.now/patterns",
+    "title": "Patterns — Energy Engine",
+    "headings": [
+      "Pattern Atlas"
+    ],
+    "controls": [
+      "PHYSIOLOGY Observatory",
+      "Observatory",
+      "Instruments",
+      "Atlas",
+      "System",
+      "OBSERVATORY",
+      "INSTRUMENTS",
+      "ATLAS",
+      "SYSTEM"
+    ],
+    "bodyText": "PHYSIOLOGY\nObservatory\n\nCARTOGRAPHY\n\nPattern Atlas\n\nA map of recurring traces drawn from your physiological signals over time.\n\nThe sky is empty. Log a few daily metrics on the Energy page to begin reading patterns.\n\nOBSERVATORY\nINSTRUMENTS\nATLAS\nSYSTEM",
+    "dimensions": {
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 844
+    },
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  {
+    "state": "system",
+    "url": "https://phases.icynatural.now/settings",
+    "viewport": "1440x1000",
+    "capturedAt": "2026-09-20T11:48:03.761Z",
+    "outputPath": "public/images/projects/energy/desktop-system.png",
+    "status": 200,
+    "ok": true,
+    "finalUrl": "https://phases.icynatural.now/settings",
+    "title": "Settings — Energy Engine",
+    "headings": [
+      "System Controls",
+      "Data",
+      "Historical memory",
+      "Health Connect",
+      "Health Connect readout",
+      "Reset demo data",
+      "Developer diagnostics",
+      "Engine Integrity",
+      "About"
+    ],
+    "controls": [
+      "PHYSIOLOGY Observatory",
+      "Observatory",
+      "Instruments",
+      "Atlas",
+      "System",
+      "Export JSON",
+      "Import JSON",
+      "Export Debug Snapshot",
+      "Import archive CSV",
+      "OPEN HISTORICAL OBSERVATORY",
+      "Clear all data",
+      "Observatory",
+      "Instruments",
+      "Atlas",
+      "System"
+    ],
+    "bodyText": "PHYSIOLOGY\nObservatory\nObservatory\nInstruments\nAtlas\nSystem\n\nMAINTENANCE BAY\n\nSystem Controls\nDATA\n\nStored locally in this browser. 0 days on file.\n\nExport JSON\nImport JSON\nExport Debug Snapshot\n\nLAST IMPORT / SYNC: NEVER\n\nLAST AUTOMATIC SYNC: NEVER\n\nHISTORICAL MEMORY\n\nHigh-resolution archive observations, stored apart from the live link and apart from the ENERGY model. Nothing here carries weight in phase, recovery or energy.\n\nObservations\n0\nCoverage\nNo archive imported\nSchema\nv1\nImport archive CSV\nOPEN HISTORICAL OBSERVATORY\n\nSleep raw data (RRI / accelerometer arrays) and exercise live-data streams are intentionally not flattened yet.\n\nHEALTH CONNECT\n\nGalaxy Watch data reaches this app through Samsung Health → Android Health Connect → the Android host. ENERGY reads only: sleep sessions and stages, heart rate, resting heart rate, exercise sessions, daily steps, distance and energy, oxygen saturation, VO₂ max, weight, body fat, lean body mass and basal metabolic rate. Nothing is ever written back. Sleep, heart rate and exercise feed the engine; the rest is stored as context only. Manual entries always take precedence over automatic values.\n\nBROWSER\n\nAutomatic signals need the Android build.\n\nThis preview runs in a browser, where Health Connect is not reachable. Manual override stays available; the Galaxy Watch link activates inside the Android app.\n\nSleepMANUAL · UNLINKED\nHeart rateMANUAL · UNLINKED\nActivityMANUAL · UNLINKED\nHRVMANUAL\nSamsung Health does not share HRV through Health Connect.\nRespirationMANUAL\nSamsung Health does not share respiratory rate through Health Connect.\n\nEXTENDED CONTEXT · NOT USED IN SCORING\n\nSteps & energy\nMANUAL · UNLINKED\nOxygen saturation\nMANUAL · UNLINKED\nVO₂ max\nMANUAL · UNLINKED\nBody composition\nMANUAL · UNLINKED\n\nDeveloper note: the Android wrapper contract is documented in ANDROID_HEALTH_CONNECT.md. In development, append ?hostMock=1 to simulate a host.\n\nHEALTH CONNECT READOUT\n\nWhat the read-only link has actually delivered. Observation only — none of the extended signals below carry any weight in recovery, energy or phase.\n\nMOVEMENT & ENERGY\n\nSteps\nNOT RECEIVED\nNO SIGNAL\nDistance\nNOT RECEIVED\nNO SIGNAL\nActive calories\nNOT RECEIVED\nNO SIGNAL\nTotal calories burned\nNOT RECEIVED\nNO SIGNAL\nExercise minutes\nNOT RECEIVED\nExercise sessions only — steps are not exercise minutes.\nNO SIGNAL\nExercise today\nNOT RECEIVED\nNo new exercise session received — unknown, not zero.\nNO SIGNAL\n\nCARDIO & RESPIRATION\n\nLatest HR\nNOT RECEIVED\nNo ordinary heart-rate sample in the synced window.\nNO SIGNAL\nResting HR\nNOT RECEIVED\nNO SIGNAL\nSleeping HR\nNOT RECEIVED\nMedian of samples inside the night's main sleep.\nNO SIGNAL\nOxygen saturation\nNOT RECEIVED\nNO SIGNAL\nSleeping HRV\nNOT RECEIVED\nNot shared through Health Connect — manual only.\nNO SIGNAL\nRespiratory rate\nNOT RECEIVED\nNot shared through Health Connect — manual only.\nNO SIGNAL\n\nBODY CONTEXT\n\nVO₂ max\nNOT RECEIVED\nNO SIGNAL\nWeight\nNOT RECEIVED\nNO SIGNAL\nBody fat\nNOT RECEIVED\nNO SIGNAL\nLean body mass\nNOT RECEIVED\nNO SIGNAL\nBasal metabolic rate\nNOT RECEIVED\nNO SIGNAL\nRESET DEMO DATA\n\nWipes every locally stored metric, rest-anchor state, and word bank back to defaults. This cannot be undone — export first if you want a backup.\n\nClear all data\nDEVELOPER DIAGNOSTICS\nLIVE ENGINE VALUES\n\nEvery row shows what the engine computed and where the value came from. Empty inputs render as No signal — the UI does not fabricate scores.\n\nawakenedAnchor\nNo signal\nRESOLVEAWAKENEDANCHOR() · NO ANCHOR SET OR RECEIVED\nrestCreditMinutes\nNo rest period recorded\nPHASESTATE.NAP_CREDIT_MINUTES\neffectiveAwakeMinutes\nAwaiting telemetry\nCOMPUTEEFFECTIVEAWAKEMINUTES(RESOLVED ANCHOR)\nphase\nUntracked\nPHASEFROMEFFECTIVEAWAKE(EFFECTIVE)\ncomputedEnergy\nNo signal\nAWAKENED ANCHOR NOT SET — ENGINE RETURNED NULL\nrecoveryScore\nInsufficient data\nNO METRICS IMPORTED\npatternLabels\nInsufficient data\nNO METRICS IMPORTED\nwordBank loaded\n8 states · 4 virtues\nSTATE.WORDBANK\nhealthHost\nNo native host (browser)\nWINDOW.PHYSIOLOGYOSNATIVE → HOST.INFO\nhealthConnect\nUnavailable in browser\nHEALTHCONNECT.STATUS\nlastAutoSync\nNever\nSTORE.APPLYHEALTHROWS(NORMALIZEHEALTHPAYLOAD)\ncurrentProvenance\nNo source recorded\nBUILDCURRENTCONTEXT(METRICS).PROVENANCE\nRAW PHASESTATE JSON\nENGINE INTEGRITY\nSILENT HELPERS\n\nInternal-only. Shows the silent signals shaping recovery, phase, and patterns. Never surfaced in the main UI.\n\nrhythmBand\nInsufficient data\nCOMPUTERHYTHMDRIFT(METRICS)\nautonomicPosture\nUnknown posture\nBUILDAUTONOMICSIGNAL(LATEST, METRICS)\nlatencyPenalty\nNo signal\nRECOVERY.TS (LATENCY_MINUTES > 40)\nactivePatterns\nInsufficient data\nBUILDPATTERNREPORT\n\nREASONING\n\n· No metric rows — engine returned baseline defaults.\nABOUT\n\nEnergy Engine ports the original Python engine 1:1 into TypeScript modules at src/engine/*. Formulas, thresholds, phase names, recovery logic, and rest-credit logic are preserved.\n\nENERGY ENGINE V1.5 — TIMING AND STATE\n\nEngine formulas frozen for the observation phase.",
+    "dimensions": {
+      "viewportWidth": 1440,
+      "viewportHeight": 1000,
+      "scrollWidth": 1440,
+      "scrollHeight": 3569
+    },
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  {
+    "state": "system",
+    "url": "https://phases.icynatural.now/settings",
+    "viewport": "390x844",
+    "capturedAt": "2026-09-20T11:48:07.873Z",
+    "outputPath": "public/images/projects/energy/mobile-system.png",
+    "status": 200,
+    "ok": true,
+    "finalUrl": "https://phases.icynatural.now/settings",
+    "title": "Settings — Energy Engine",
+    "headings": [
+      "System Controls",
+      "Data",
+      "Historical memory",
+      "Health Connect",
+      "Health Connect readout",
+      "Reset demo data",
+      "Developer diagnostics",
+      "Engine Integrity",
+      "About"
+    ],
+    "controls": [
+      "PHYSIOLOGY Observatory",
+      "Observatory",
+      "Instruments",
+      "Atlas",
+      "System",
+      "Export JSON",
+      "Import JSON",
+      "Export Debug Snapshot",
+      "Import archive CSV",
+      "OPEN HISTORICAL OBSERVATORY",
+      "Clear all data",
+      "OBSERVATORY",
+      "INSTRUMENTS",
+      "ATLAS",
+      "SYSTEM"
+    ],
+    "bodyText": "PHYSIOLOGY\nObservatory\n\nMAINTENANCE BAY\n\nSystem Controls\nDATA\n\nStored locally in this browser. 0 days on file.\n\nExport JSON\nImport JSON\nExport Debug Snapshot\n\nLAST IMPORT / SYNC: NEVER\n\nLAST AUTOMATIC SYNC: NEVER\n\nHISTORICAL MEMORY\n\nHigh-resolution archive observations, stored apart from the live link and apart from the ENERGY model. Nothing here carries weight in phase, recovery or energy.\n\nObservations\n0\nCoverage\nNo archive imported\nSchema\nv1\nImport archive CSV\nOPEN HISTORICAL OBSERVATORY\n\nSleep raw data (RRI / accelerometer arrays) and exercise live-data streams are intentionally not flattened yet.\n\nHEALTH CONNECT\n\nGalaxy Watch data reaches this app through Samsung Health → Android Health Connect → the Android host. ENERGY reads only: sleep sessions and stages, heart rate, resting heart rate, exercise sessions, daily steps, distance and energy, oxygen saturation, VO₂ max, weight, body fat, lean body mass and basal metabolic rate. Nothing is ever written back. Sleep, heart rate and exercise feed the engine; the rest is stored as context only. Manual entries always take precedence over automatic values.\n\nBROWSER\n\nAutomatic signals need the Android build.\n\nThis preview runs in a browser, where Health Connect is not reachable. Manual override stays available; the Galaxy Watch link activates inside the Android app.\n\nSleepMANUAL · UNLINKED\nHeart rateMANUAL · UNLINKED\nActivityMANUAL · UNLINKED\nHRVMANUAL\nSamsung Health does not share HRV through Health Connect.\nRespirationMANUAL\nSamsung Health does not share respiratory rate through Health Connect.\n\nEXTENDED CONTEXT · NOT USED IN SCORING\n\nSteps & energy\nMANUAL · UNLINKED\nOxygen saturation\nMANUAL · UNLINKED\nVO₂ max\nMANUAL · UNLINKED\nBody composition\nMANUAL · UNLINKED\n\nDeveloper note: the Android wrapper contract is documented in ANDROID_HEALTH_CONNECT.md. In development, append ?hostMock=1 to simulate a host.\n\nHEALTH CONNECT READOUT\n\nWhat the read-only link has actually delivered. Observation only — none of the extended signals below carry any weight in recovery, energy or phase.\n\nMOVEMENT & ENERGY\n\nSteps\nNOT RECEIVED\nNO SIGNAL\nDistance\nNOT RECEIVED\nNO SIGNAL\nActive calories\nNOT RECEIVED\nNO SIGNAL\nTotal calories burned\nNOT RECEIVED\nNO SIGNAL\nExercise minutes\nNOT RECEIVED\nExercise sessions only — steps are not exercise minutes.\nNO SIGNAL\nExercise today\nNOT RECEIVED\nNo new exercise session received — unknown, not zero.\nNO SIGNAL\n\nCARDIO & RESPIRATION\n\nLatest HR\nNOT RECEIVED\nNo ordinary heart-rate sample in the synced window.\nNO SIGNAL\nResting HR\nNOT RECEIVED\nNO SIGNAL\nSleeping HR\nNOT RECEIVED\nMedian of samples inside the night's main sleep.\nNO SIGNAL\nOxygen saturation\nNOT RECEIVED\nNO SIGNAL\nSleeping HRV\nNOT RECEIVED\nNot shared through Health Connect — manual only.\nNO SIGNAL\nRespiratory rate\nNOT RECEIVED\nNot shared through Health Connect — manual only.\nNO SIGNAL\n\nBODY CONTEXT\n\nVO₂ max\nNOT RECEIVED\nNO SIGNAL\nWeight\nNOT RECEIVED\nNO SIGNAL\nBody fat\nNOT RECEIVED\nNO SIGNAL\nLean body mass\nNOT RECEIVED\nNO SIGNAL\nBasal metabolic rate\nNOT RECEIVED\nNO SIGNAL\nRESET DEMO DATA\n\nWipes every locally stored metric, rest-anchor state, and word bank back to defaults. This cannot be undone — export first if you want a backup.\n\nClear all data\nDEVELOPER DIAGNOSTICS\nLIVE ENGINE VALUES\n\nEvery row shows what the engine computed and where the value came from. Empty inputs render as No signal — the UI does not fabricate scores.\n\nawakenedAnchor\nNo signal\nrestCreditMinutes\nNo rest period recorded\neffectiveAwakeMinutes\nAwaiting telemetry\nphase\nUntracked\ncomputedEnergy\nNo signal\nrecoveryScore\nInsufficient data\npatternLabels\nInsufficient data\nwordBank loaded\n8 states · 4 virtues\nhealthHost\nNo native host (browser)\nhealthConnect\nUnavailable in browser\nlastAutoSync\nNever\ncurrentProvenance\nNo source recorded\nRAW PHASESTATE JSON\nENGINE INTEGRITY\nSILENT HELPERS\n\nInternal-only. Shows the silent signals shaping recovery, phase, and patterns. Never surfaced in the main UI.\n\nrhythmBand\nInsufficient data\nautonomicPosture\nUnknown posture\nlatencyPenalty\nNo signal\nactivePatterns\nInsufficient data\n\nREASONING\n\n· No metric rows — engine returned baseline defaults.\nABOUT\n\nEnergy Engine ports the original Python engine 1:1 into TypeScript modules at src/engine/*. Formulas, thresholds, phase names, recovery logic, and rest-credit logic are preserved.\n\nENERGY ENGINE V1.5 — TIMING AND STATE\n\nEngine formulas frozen for the observation phase.\n\nOBSERVATORY\nINSTRUMENTS\nATLAS\nSYSTEM",
+    "dimensions": {
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 5146
+    },
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+]

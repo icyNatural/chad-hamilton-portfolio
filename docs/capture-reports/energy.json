@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "energy",
+    "url": "https://phases.icynatural.now",
+    "viewport": "1440x1000",
+    "state": "landing",
+    "capturedAt": "2026-09-20T11:45:07.024Z",
+    "outputPath": "public/images/projects/energy/desktop-landing.png",
+    "status": 200,
+    "ok": true,
+    "title": "Observatory — Energy Engine",
+    "finalUrl": "https://phases.icynatural.now/",
+    "headings": [
+      "Untracked"
+    ],
+    "controls": [
+      "PhysiologyObservatory",
+      "Observatory",
+      "Instruments",
+      "Atlas",
+      "System",
+      "Telemetry"
+    ],
+    "bodyText": "PHYSIOLOGY OBSERVATORY OBSERVATORY INSTRUMENTS ATLAS SYSTEM SUN, SEP 20 CURRENT PHASE Untracked Awakened anchor has not been set AWAITING SIGNAL RECOVERY No signal Sync overnight signals to read recovery. ENERGY FIELD Awaiting telemetry Set an awakened anchor to read the energy field. SUGGESTED ACTION Execute System looks usable and stable. Favor smooth, sustainable output. SIGNALS Insufficient data Import overnight metrics to surface patterns. TELEMETRY",
+    "dimensions": {
+      "viewportWidth": 1440,
+      "viewportHeight": 1000,
+      "scrollWidth": 1440,
+      "scrollHeight": 1000
+    },
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  {
+    "slug": "energy",
+    "url": "https://phases.icynatural.now",
+    "viewport": "390x844",
+    "state": "landing",
+    "capturedAt": "2026-09-20T11:45:10.841Z",
+    "outputPath": "public/images/projects/energy/mobile-landing.png",
+    "status": 200,
+    "ok": true,
+    "title": "Observatory — Energy Engine",
+    "finalUrl": "https://phases.icynatural.now/",
+    "headings": [
+      "Untracked"
+    ],
+    "controls": [
+      "PhysiologyObservatory",
+      "Telemetry",
+      "Observatory",
+      "Instruments",
+      "Atlas",
+      "System"
+    ],
+    "bodyText": "CURRENT PHASE Untracked AWAITING SIGNAL Awakened anchor has not been set RECOVERY No signal — ENERGY Awaiting — SUGGESTED ACTION Execute System looks usable and stable. Favor smooth, sustainable output. SIGNALS Insufficient data Import overnight metrics to surface patterns. TELEMETRY OBSERVATORY INSTRUMENTS ATLAS SYSTEM",
+    "dimensions": {
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 930
+    },
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+]

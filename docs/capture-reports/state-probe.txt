@@ -1,0 +1,217 @@
+﻿
+## icysense
+{
+  "action": "History",
+  "exists": 0,
+  "url": "https://vision.icynatural.now/",
+  "headings": [
+    "Welcome to IcySense"
+  ],
+  "dialogs": [],
+  "controls": [
+    "Identify",
+    "Icy",
+    "Ask",
+    "Start Camera",
+    "Speak",
+    "Tap here to start scanning"
+  ],
+  "body": "PERCEPTION IcySense STANDBY Tap Start Camera to begin. Identify Icy Ask Start Camera Speak Aim at anything. Tap the orb to identify it. Welcome to IcySense A new way of seeing. Point at anything. Tap the orb. Identify — What is it? Name, type, and quick facts. Icy — How does it fit into reality? One synthesis of origin, mechanism, matter, relationships, time, and the larger systems it belongs to — plus the primitive operations and universal patterns behind it. Ask — Follow-up questions about whatever you scanned. Tap here to start scanning You'll be asked for camera access on the next screen."
+}
+{
+  "action": "Settings",
+  "exists": 0,
+  "url": "https://vision.icynatural.now/",
+  "headings": [
+    "Welcome to IcySense"
+  ],
+  "dialogs": [],
+  "controls": [
+    "Identify",
+    "Icy",
+    "Ask",
+    "Start Camera",
+    "Speak",
+    "Tap here to start scanning"
+  ],
+  "body": "PERCEPTION IcySense STANDBY Tap Start Camera to begin. Identify Icy Ask Start Camera Speak Aim at anything. Tap the orb to identify it. Welcome to IcySense A new way of seeing. Point at anything. Tap the orb. Identify — What is it? Name, type, and quick facts. Icy — How does it fit into reality? One synthesis of origin, mechanism, matter, relationships, time, and the larger systems it belongs to — plus the primitive operations and universal patterns behind it. Ask — Follow-up questions about whatever you scanned. Tap here to start scanning You'll be asked for camera access on the next screen."
+}
+{
+  "action": "Start Camera",
+  "exists": 1,
+  "url": "https://vision.icynatural.now/",
+  "headings": [
+    "Welcome to IcySense"
+  ],
+  "dialogs": [],
+  "controls": [
+    "Identify",
+    "Icy",
+    "Ask",
+    "Start Camera",
+    "Speak",
+    "Tap here to start scanning"
+  ],
+  "body": "PERCEPTION IcySense STANDBY Tap Start Camera to begin. Identify Icy Ask Start Camera Speak Aim at anything. Tap the orb to identify it. Welcome to IcySense A new way of seeing. Point at anything. Tap the orb. Identify — What is it? Name, type, and quick facts. Icy — How does it fit into reality? One synthesis of origin, mechanism, matter, relationships, time, and the larger systems it belongs to — plus the primitive operations and universal patterns behind it. Ask — Follow-up questions about whatever you scanned. Tap here to start scanning You'll be asked for camera access on the next screen."
+}
+
+## icy-lab
+{
+  "action": "New project",
+  "exists": 1,
+  "url": "https://playground.icynatural.now/",
+  "headings": [
+    "Start your first project",
+    "Create a new project"
+  ],
+  "dialogs": [],
+  "controls": [
+    "No project",
+    "New project",
+    "Import from JSON",
+    "Cancel",
+    "Create"
+  ],
+  "body": "ICY LAB No project Start your first project Create a blank Icy Lab project or import one from a previous JSON export. Everything lives on this device — your files, prompts, versions, and assets remain private and portable. New project Import from JSON Create a new project Blank React + Vite workspace. Add an initial description to generate right away, or leave it empty to build up in chat. PROJECT NAME INITIAL DESCRIPTION (OPTIONAL) Cancel Create"
+}
+
+## semantic-archaeology
+{
+  "action": "Discovery",
+  "exists": 1,
+  "url": "https://language.icynatural.now/discovery",
+  "headings": [
+    "Wander the stacks",
+    "Words That Reversed Meaning",
+    "Living Linguistic Fossils",
+    "Sound Becoming Sight",
+    "Beloved False Histories"
+  ],
+  "dialogs": [],
+  "controls": [
+    "Bureau of Linguistic ExcavationSemantic Archaeology",
+    "Excavate",
+    "Discovery",
+    "Collections",
+    "NI-1290-RNicePleasant, agreeable, kind.Origin · Latin · nescius",
+    "DI-1568-ADisasterA sudden calamity.Origin · Greek via Latin · astron",
+    "CO-1385-SConsiderTo think carefully about.Origin · Proto-Indo-European · *sweid-",
+    "ME-1140-BMelancholyA pensive, thoughtful sadness.Origin · Ancient Greek · μελαγχολία",
+    "CL-0829-XClarityThe quality of being coherent, transparent, or intelligible.Origin · Proto-Indo-European · *kel-",
+    "SI-1533-WSincereFree from pretense; genuine.Origin · Proto-Indo-European · *sem- + *ker-",
+    "Excavate",
+    "Discovery",
+    "Collections"
+  ],
+  "body": "BUREAU OF LINGUISTIC EXCAVATION Semantic Archaeology EXCAVATE DISCOVERY COLLECTIONS PUBLIC GALLERIES · EAST WING Wander the stacks The archive rewards patience over search. Choose a gallery and let unrelated words draw kinship across centuries. GALLERY 01 Words That Reversed Meaning Nice once meant foolish. Awful once meant awe-inspiring. A gallery of complete inversions. NI-1290-R Nice Pleasant, agreeable, kind. ORIGIN · LATIN · NESCIUS GALLERY 02 Living Linguistic Fossils Extinct worldviews still carried, unnoticed, in ordinary sentences. DI-1568-A Disaster A sudden calamity. ORIGIN · GREEK VIA LATIN · ASTRON CO-1385-S Consider To think carefully about. ORIGIN · PROTO-INDO-EUROPEAN · *SWEID- ME-1140-B Melancholy A pensive, thoughtful sadness. ORIGIN · ANCIENT GREEK · ΜΕΛΑΓΧΟΛΊΑ GALLERY 03 Sound Becoming Sight Words where an ancient sensory metaphor migrated from ear to eye. CL-0829-X Clarity The quality of being coherent, transparent, or intelligible. ORIGIN · PROTO-INDO-EUROPEAN · *KEL- GALLERY 04 Beloved False Histories Words whose imagined pasts have proven stronger than their real ones. SI-1533-W Sincere Free from pretense; genuine. ORIGIN · PROTO-INDO-EUROPEAN · *SEM- + *KER- \"Language is an archaeological site waiting to be excavated.\" CURATED BY THE INSTITUTE OF SEMANTIC DRIFT · VOL. VIII"
+}
+{
+  "action": "Collections",
+  "exists": 1,
+  "url": "https://language.icynatural.now/collections",
+  "headings": [
+    "Collections",
+    "Fossils of the Cosmos",
+    "The Great Reversals",
+    "The Humoral Body",
+    "Light & Understanding"
+  ],
+  "dialogs": [],
+  "controls": [
+    "Bureau of Linguistic ExcavationSemantic Archaeology",
+    "Excavate",
+    "Discovery",
+    "Collections",
+    "DI-1568-ADisasterA sudden calamity.Greek via Latin →",
+    "CO-1385-SConsiderTo think carefully about.Proto-Indo-European →",
+    "NI-1290-RNicePleasant, agreeable, kind.Latin →",
+    "ME-1140-BMelancholyA pensive, thoughtful sadness.Ancient Greek →",
+    "CL-0829-XClarityThe quality of being coherent, transparent, or intelligible.Proto-Indo-European →",
+    "Excavate",
+    "Discovery",
+    "Collections"
+  ],
+  "body": "BUREAU OF LINGUISTIC EXCAVATION Semantic Archaeology EXCAVATE DISCOVERY COLLECTIONS CURATORIAL DRAWERS · WEST WING Collections Specimens grouped by the worlds they preserve. Open a drawer. DRAWER · COSMOLOGY Fossils of the Cosmos 2 items Words that still whisper of stars and skies. DI-1568-A Disaster A sudden calamity. GREEK VIA LATIN → CO-1385-S Consider To think carefully about. PROTO-INDO-EUROPEAN → DRAWER · REVERSALS The Great Reversals 1 items Words that arrived meaning one thing and left meaning its opposite. NI-1290-R Nice Pleasant, agreeable, kind. LATIN → DRAWER · BODY The Humoral Body 1 items Language older than modern medicine, preserved in daily speech. ME-1140-B Melancholy A pensive, thoughtful sadness. ANCIENT GREEK → DRAWER · LIGHT Light & Understanding 1 items The metaphor that runs from the eye to the mind. CL-0829-X Clarity The quality of being coherent, transparent, or intelligible. PROTO-INDO-EUROPEAN → \"Language is an archaeological site waiting to be excavated.\" CURATED BY THE INSTITUTE OF SEMANTIC DRIFT · VOL. VIII"
+}
+{
+  "action": "All galleries →",
+  "exists": 1,
+  "url": "https://language.icynatural.now/discovery",
+  "headings": [
+    "Wander the stacks",
+    "Words That Reversed Meaning",
+    "Living Linguistic Fossils",
+    "Sound Becoming Sight",
+    "Beloved False Histories"
+  ],
+  "dialogs": [],
+  "controls": [
+    "Bureau of Linguistic ExcavationSemantic Archaeology",
+    "Excavate",
+    "Discovery",
+    "Collections",
+    "NI-1290-RNicePleasant, agreeable, kind.Origin · Latin · nescius",
+    "DI-1568-ADisasterA sudden calamity.Origin · Greek via Latin · astron",
+    "CO-1385-SConsiderTo think carefully about.Origin · Proto-Indo-European · *sweid-",
+    "ME-1140-BMelancholyA pensive, thoughtful sadness.Origin · Ancient Greek · μελαγχολία",
+    "CL-0829-XClarityThe quality of being coherent, transparent, or intelligible.Origin · Proto-Indo-European · *kel-",
+    "SI-1533-WSincereFree from pretense; genuine.Origin · Proto-Indo-European · *sem- + *ker-",
+    "Excavate",
+    "Discovery",
+    "Collections"
+  ],
+  "body": "BUREAU OF LINGUISTIC EXCAVATION Semantic Archaeology EXCAVATE DISCOVERY COLLECTIONS PUBLIC GALLERIES · EAST WING Wander the stacks The archive rewards patience over search. Choose a gallery and let unrelated words draw kinship across centuries. GALLERY 01 Words That Reversed Meaning Nice once meant foolish. Awful once meant awe-inspiring. A gallery of complete inversions. NI-1290-R Nice Pleasant, agreeable, kind. ORIGIN · LATIN · NESCIUS GALLERY 02 Living Linguistic Fossils Extinct worldviews still carried, unnoticed, in ordinary sentences. DI-1568-A Disaster A sudden calamity. ORIGIN · GREEK VIA LATIN · ASTRON CO-1385-S Consider To think carefully about. ORIGIN · PROTO-INDO-EUROPEAN · *SWEID- ME-1140-B Melancholy A pensive, thoughtful sadness. ORIGIN · ANCIENT GREEK · ΜΕΛΑΓΧΟΛΊΑ GALLERY 03 Sound Becoming Sight Words where an ancient sensory metaphor migrated from ear to eye. CL-0829-X Clarity The quality of being coherent, transparent, or intelligible. ORIGIN · PROTO-INDO-EUROPEAN · *KEL- GALLERY 04 Beloved False Histories Words whose imagined pasts have proven stronger than their real ones. SI-1533-W Sincere Free from pretense; genuine. ORIGIN · PROTO-INDO-EUROPEAN · *SEM- + *KER- \"Language is an archaeological site waiting to be excavated.\" CURATED BY THE INSTITUTE OF SEMANTIC DRIFT · VOL. VIII"
+}
+{
+  "action": "Gallery 02",
+  "exists": 1,
+  "url": "https://language.icynatural.now/discovery#living-fossils",
+  "headings": [
+    "Wander the stacks",
+    "Words That Reversed Meaning",
+    "Living Linguistic Fossils",
+    "Sound Becoming Sight",
+    "Beloved False Histories"
+  ],
+  "dialogs": [],
+  "controls": [
+    "Bureau of Linguistic ExcavationSemantic Archaeology",
+    "Excavate",
+    "Discovery",
+    "Collections",
+    "NI-1290-RNicePleasant, agreeable, kind.Origin · Latin · nescius",
+    "DI-1568-ADisasterA sudden calamity.Origin · Greek via Latin · astron",
+    "CO-1385-SConsiderTo think carefully about.Origin · Proto-Indo-European · *sweid-",
+    "ME-1140-BMelancholyA pensive, thoughtful sadness.Origin · Ancient Greek · μελαγχολία",
+    "CL-0829-XClarityThe quality of being coherent, transparent, or intelligible.Origin · Proto-Indo-European · *kel-",
+    "SI-1533-WSincereFree from pretense; genuine.Origin · Proto-Indo-European · *sem- + *ker-",
+    "Excavate",
+    "Discovery",
+    "Collections"
+  ],
+  "body": "BUREAU OF LINGUISTIC EXCAVATION Semantic Archaeology EXCAVATE DISCOVERY COLLECTIONS PUBLIC GALLERIES · EAST WING Wander the stacks The archive rewards patience over search. Choose a gallery and let unrelated words draw kinship across centuries. GALLERY 01 Words That Reversed Meaning Nice once meant foolish. Awful once meant awe-inspiring. A gallery of complete inversions. NI-1290-R Nice Pleasant, agreeable, kind. ORIGIN · LATIN · NESCIUS GALLERY 02 Living Linguistic Fossils Extinct worldviews still carried, unnoticed, in ordinary sentences. DI-1568-A Disaster A sudden calamity. ORIGIN · GREEK VIA LATIN · ASTRON CO-1385-S Consider To think carefully about. ORIGIN · PROTO-INDO-EUROPEAN · *SWEID- ME-1140-B Melancholy A pensive, thoughtful sadness. ORIGIN · ANCIENT GREEK · ΜΕΛΑΓΧΟΛΊΑ GALLERY 03 Sound Becoming Sight Words where an ancient sensory metaphor migrated from ear to eye. CL-0829-X Clarity The quality of being coherent, transparent, or intelligible. ORIGIN · PROTO-INDO-EUROPEAN · *KEL- GALLERY 04 Beloved False Histories Words whose imagined pasts have proven stronger than their real ones. SI-1533-W Sincere Free from pretense; genuine. ORIGIN · PROTO-INDO-EUROPEAN · *SEM- + *KER- \"Language is an archaeological site waiting to be excavated.\" CURATED BY THE INSTITUTE OF SEMANTIC DRIFT · VOL. VIII"
+}
+
+## photogression
+{
+  "path": "/ways",
+  "url": "https://photogression.icynatural.now/ways",
+  "title": "Ways of Seeing — Photogression",
+  "headings": [
+    "Thirteen lenses.",
+    "Reflection",
+    "Light",
+    "Composition",
+    "Patterns",
+    "Water",
+    "Trees",
+    "Wildlife",
+    "Sky",
+    "Texture",
+    "Color",
+    "Shapes",
+    "Macro",
+    "Boundaries"
+  ],
+  "body": "⌖ EXPLORE Thirteen lenses. Pick one. Everything you capture is filed there. REFLECTION LIGHT COMPOSITION PATTERNS WATER TREES WILDLIFE SKY TEXTURE COLOR SHAPES MACRO ◎ BOUNDARIES Reflection 0 Find the world repeating itself. OPEN LENS → Light 0 Follow the direction light travels. OPEN LENS → Composition 0 Arrange the frame on purpose. OPEN LENS → Patterns 0 Repetition until it becomes rhythm. OPEN LENS → Water 0 The same surface, one second apart. OPEN LENS → Trees 0 Look up, and keep looking. OPEN LENS → Wildlife 0 One subject, plenty of air. OPEN LENS → Sky 0 The widest subject there is. OPEN LENS → Texture 0 Close enough to feel it. OPEN LENS → Color 0 Warm against cool. OPEN LENS → Shapes 0 Geometry before naming. OPEN LENS → Macro 0 An inch becomes a country. OPEN LENS → Boundaries 0 Where one world becomes another. OPEN LENS → SWIPE ← → TO CHANGE LENS Explore missions OPEN → ⌖ EXPLORE REFLECTION ◎ CAPTURE ◌ LIBRARY ⟳ PROGRESS"
+}

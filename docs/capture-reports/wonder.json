@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "wonder",
+    "url": "https://wonder.icynatural.now",
+    "viewport": "1440x1000",
+    "state": "landing",
+    "capturedAt": "2026-09-20T11:45:07.026Z",
+    "outputPath": "public/images/projects/wonder/desktop-landing.png",
+    "status": 200,
+    "ok": true,
+    "title": "Sun · Earth · Horizon — A World Understanding Experience",
+    "finalUrl": "https://wonder.icynatural.now/",
+    "headings": [
+      "Sun · Earth · Horizon"
+    ],
+    "controls": [
+      "⊕Earth",
+      "☉Sun",
+      "Atmosphere",
+      "Experience a phenomenon"
+    ],
+    "bodyText": "MODULE 01 · ASTRONOMY Sun · Earth · Horizon PERF ⊕ Earth ☉ Sun Atmosphere Experience a phenomenon Drag to rotate the planet, or choose a guided experience — watch the simulation itself explain sunrise, solar wind, scattering and more. SIMULATION SPEED 1 DAY ≈ 22S 4,000× · HIGH QUALITY",
+    "dimensions": {
+      "viewportWidth": 1440,
+      "viewportHeight": 1000,
+      "scrollWidth": 1440,
+      "scrollHeight": 1000
+    },
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  {
+    "slug": "wonder",
+    "url": "https://wonder.icynatural.now",
+    "viewport": "390x844",
+    "state": "landing",
+    "capturedAt": "2026-09-20T11:45:12.764Z",
+    "outputPath": "public/images/projects/wonder/mobile-landing.png",
+    "status": 200,
+    "ok": true,
+    "title": "Sun · Earth · Horizon — A World Understanding Experience",
+    "finalUrl": "https://wonder.icynatural.now/",
+    "headings": [
+      "Sun · Earth · Horizon"
+    ],
+    "controls": [
+      "⊕Earth",
+      "☉Sun",
+      "Atmosphere",
+      "Experience a phenomenon"
+    ],
+    "bodyText": "MODULE 01 · ASTRONOMY Sun · Earth · Horizon PERF ⊕ Earth ☉ Sun Atmosphere Experience a phenomenon Drag to rotate the planet, or choose a guided experience — watch the simulation itself explain sunrise, solar wind, scattering and more. SIMULATION SPEED 1 DAY ≈ 22S 4,000× · HIGH QUALITY",
+    "dimensions": {
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 844
+    },
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+]

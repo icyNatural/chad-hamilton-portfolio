@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "icysense",
+    "url": "https://vision.icynatural.now",
+    "viewport": "1440x1000",
+    "state": "landing",
+    "capturedAt": "2026-09-20T14:26:57.318Z",
+    "outputPath": "public/images/projects/icysense/desktop-landing.png",
+    "status": 200,
+    "ok": true,
+    "title": "IcySense — AI Vision Scanner",
+    "finalUrl": "https://vision.icynatural.now/",
+    "headings": [
+      "Welcome to IcySense"
+    ],
+    "controls": [
+      "Identify",
+      "Icy",
+      "Ask",
+      "Start Camera",
+      "Speak",
+      "Tap here to start scanning"
+    ],
+    "bodyText": "PERCEPTION IcySense STANDBY Tap Start Camera to begin. Identify Icy Ask Start Camera Speak Aim at anything. Tap the orb to identify it. Welcome to IcySense A new way of seeing. Point at anything. Tap the orb. Identify — What is it? Name, type, and quick facts. Icy — How does it fit into reality? One synthesis of origin, mechanism, matter, relationships, time, and the larger systems it belongs to — plus the primitive operations and universal patterns behind it. Ask — Follow-up questions about whatever you scanned. Tap here to start scanning You'll be asked for camera access on the next screen.",
+    "dimensions": {
+      "viewportWidth": 1440,
+      "viewportHeight": 1000,
+      "scrollWidth": 1440,
+      "scrollHeight": 1000
+    },
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  {
+    "slug": "icysense",
+    "url": "https://vision.icynatural.now",
+    "viewport": "390x844",
+    "state": "landing",
+    "capturedAt": "2026-09-20T14:27:01.233Z",
+    "outputPath": "public/images/projects/icysense/mobile-landing.png",
+    "status": 200,
+    "ok": true,
+    "title": "IcySense — AI Vision Scanner",
+    "finalUrl": "https://vision.icynatural.now/",
+    "headings": [
+      "Welcome to IcySense"
+    ],
+    "controls": [
+      "Identify",
+      "Icy",
+      "Ask",
+      "Start Camera",
+      "Speak",
+      "Tap here to start scanning"
+    ],
+    "bodyText": "PERCEPTION IcySense STANDBY Tap Start Camera to begin. Identify Icy Ask Start Camera Speak Aim at anything. Tap the orb to identify it. Welcome to IcySense A new way of seeing. Point at anything. Tap the orb. Identify — What is it? Name, type, and quick facts. Icy — How does it fit into reality? One synthesis of origin, mechanism, matter, relationships, time, and the larger systems it belongs to — plus the primitive operations and universal patterns behind it. Ask — Follow-up questions about whatever you scanned. Tap here to start scanning You'll be asked for camera access on the next screen.",
+    "dimensions": {
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 844
+    },
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+]
