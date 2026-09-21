@@ -12,6 +12,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+preview.pid
+preview.stdout.log
+preview.stderr.log
+
+# generated portfolio validation artifacts
+validation-output/
 
 # environment variables
 .env
