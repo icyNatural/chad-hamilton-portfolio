@@ -1,0 +1,45 @@
+---
+import LiveProjectCase from '../../components/LiveProjectCase.astro';
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+---
+
+<LiveProjectCase
+  title="Semantic Archaeology"
+  description="A case study of Semantic Archaeology, an interactive museum and excavation engine for the histories carried inside words."
+  eyebrow="Case study / Semantic Archaeology"
+  headline="A museum for the histories hiding inside ordinary words."
+  summary="Semantic Archaeology turns etymology into a spatial, curated experience. Visitors can excavate a word, descend through its historical forms, or wander themed galleries and collections."
+  tags={['Language system', 'Editorial interface', 'Responsive web app']}
+  liveUrl="https://language.icynatural.now"
+  desktopImage={`${base}images/projects/semantic-archaeology/desktop-landing.png`}
+  mobileImage={`${base}images/projects/semantic-archaeology/mobile-landing.png`}
+  desktopAlt="Semantic Archaeology desktop interface showing the word Clarity and its historical language forms"
+  mobileAlt="Semantic Archaeology mobile interface with excavation, discovery, and collections navigation"
+  visualCaption="The opening excavation pairs a searchable word card with a vertical timeline from modern English toward reconstructed roots."
+  details={[
+    { label: 'Purpose', value: 'Make semantic change explorable rather than encyclopedic' },
+    { label: 'Primary paths', value: 'Excavate, Discovery, Collections' },
+    { label: 'Content model', value: 'Words, eras, roots, galleries, and curatorial drawers' },
+    { label: 'Visual language', value: 'Museum catalog, archive card, and archaeological timeline' },
+  ]}
+  purposeTitle="Let a word reveal the worlds it has carried."
+  purposeCopy={[
+    'Most dictionary experiences flatten a word into its current definition. Semantic Archaeology begins with the opposite premise: meaning is layered, and earlier uses remain present inside modern speech.',
+    'The product organizes that depth into approachable routes. A direct excavation follows one word through time, while discovery galleries create surprising relationships across different specimens.',
+  ]}
+  actions={[
+    'Search for a word, root, language, or era.',
+    'Descend through historical forms and open individual stages.',
+    'Browse themed galleries such as reversals and living linguistic fossils.',
+    'Move through curated collections grouped by cosmology, body, light, and other motifs.',
+  ]}
+  implementation={[
+    'A responsive editorial layout combines search, cards, timelines, drawers, and persistent navigation.',
+    'Content hierarchy uses era labels, pronunciations, definitions, roots, and specimen identifiers to keep dense material readable.',
+    'The warm paper palette and typographic contrast give the application a distinct institutional identity without imitating a conventional reference site.',
+  ]}
+  distinctionTitle="The interface treats language as a place to wander."
+  distinctionCopy="Search is only one entrance. Galleries and drawers encourage lateral discovery, letting unrelated words expose shared metaphors, reversals, and inherited worldviews."
+  nextHref={`${base}projects/photogression/`}
+  nextLabel="Photogression"
+/>

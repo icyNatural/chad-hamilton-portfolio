@@ -1,0 +1,105 @@
+---
+import EvidenceFrame from './EvidenceFrame.astro';
+import Layout from '../layouts/Layout.astro';
+
+interface Detail {
+  label: string;
+  value: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  eyebrow: string;
+  headline: string;
+  summary: string;
+  tags: string[];
+  liveUrl: string;
+  desktopImage: string;
+  mobileImage: string;
+  desktopAlt: string;
+  mobileAlt: string;
+  visualCaption: string;
+  details: Detail[];
+  purposeTitle: string;
+  purposeCopy: string[];
+  actions: string[];
+  implementation: string[];
+  distinctionTitle: string;
+  distinctionCopy: string;
+  nextHref: string;
+  nextLabel: string;
+}
+
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+const {
+  title, description, eyebrow, headline, summary, tags, liveUrl, desktopImage, mobileImage,
+  desktopAlt, mobileAlt, visualCaption, details, purposeTitle, purposeCopy, actions,
+  implementation, distinctionTitle, distinctionCopy, nextHref, nextLabel,
+} = Astro.props;
+---
+
+<Layout title={`${title} case study — Chad Hamilton`} description={description}>
+  <article class="case-study">
+    <header class="case-hero section-pad">
+      <div class="shell">
+        <a class="back-link" href={`${base}#work`}><span aria-hidden="true">←</span> Selected work</a>
+        <div class="case-hero__grid">
+          <div><p class="eyebrow">{eyebrow}</p><h1>{headline}</h1></div>
+          <div class="case-hero__summary">
+            <p>{summary}</p>
+            <div class="tag-row">{tags.map((tag) => <span>{tag}</span>)}</div>
+            <a class="button button--primary case-live-link" href={liveUrl} target="_blank" rel="noopener noreferrer">Open live application <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="case-visual shell">
+      <EvidenceFrame src={desktopImage} alt={desktopAlt} label={`${title} / Desktop`} caption={visualCaption} width={1440} height={1000} eager={true} />
+    </section>
+
+    <section class="case-facts section-pad-sm">
+      <div class="shell case-facts__grid">
+        {details.map((detail) => <div><span class="eyebrow">{detail.label}</span><strong>{detail.value}</strong></div>)}
+      </div>
+    </section>
+
+    <section class="section-pad section-rule">
+      <div class="shell narrative-grid">
+        <div><p class="eyebrow">Purpose / 01</p><h2>{purposeTitle}</h2></div>
+        <div class="prose">{purposeCopy.map((paragraph) => <p>{paragraph}</p>)}</div>
+      </div>
+    </section>
+
+    <section class="section-pad section-dark">
+      <div class="shell project-detail-grid">
+        <div>
+          <p class="eyebrow">Core actions / 02</p>
+          <h2>What people can do.</h2>
+          <ul class="project-action-list">{actions.map((action) => <li>{action}</li>)}</ul>
+        </div>
+        <div>
+          <p class="eyebrow">Implementation / 03</p>
+          <h2>How the experience is shaped.</h2>
+          <ul class="project-action-list">{implementation.map((item) => <li>{item}</li>)}</ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad section-rule">
+      <div class="shell evidence-pair project-showcase">
+        <div class="project-showcase__copy">
+          <p class="eyebrow">Distinguishing quality / 04</p>
+          <h2>{distinctionTitle}</h2>
+          <p>{distinctionCopy}</p>
+        </div>
+        <EvidenceFrame src={mobileImage} alt={mobileAlt} label={`${title} / Mobile`} caption="The experience keeps its core hierarchy and visual character on a narrow screen." width={390} height={844} tone="light" />
+      </div>
+    </section>
+
+    <nav class="case-next" aria-label="Project navigation">
+      <div class="shell case-next__inner"><span>Next project</span><a href={nextHref}>{nextLabel} <span aria-hidden="true">→</span></a></div>
+    </nav>
+  </article>
+</Layout>

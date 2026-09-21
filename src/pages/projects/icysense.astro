@@ -1,0 +1,45 @@
+---
+import LiveProjectCase from '../../components/LiveProjectCase.astro';
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+---
+
+<LiveProjectCase
+  title="IcySense"
+  description="A case study of IcySense, a camera-first visual scanner for identification, systems context, and follow-up questions."
+  eyebrow="Case study / IcySense"
+  headline="A visual scanner that moves from naming to understanding."
+  summary="IcySense begins with a familiar camera interaction, then offers three levels of inquiry: identify the object, place it inside larger systems, or ask a focused follow-up question."
+  tags={['Camera interface', 'AI-assisted inquiry', 'Voice and touch']}
+  liveUrl="https://vision.icynatural.now"
+  desktopImage={`${base}images/projects/icysense/desktop-landing.png`}
+  mobileImage={`${base}images/projects/icysense/mobile-landing.png`}
+  desktopAlt="IcySense welcome screen explaining Identify, Icy, and Ask modes over a dark camera interface"
+  mobileAlt="IcySense mobile welcome screen with camera start action and three inquiry modes"
+  visualCaption="The welcome layer explains the three modes before camera access, giving the scanner a clear conceptual model before the first scan."
+  details={[
+    { label: 'Purpose', value: 'Turn ordinary objects into starting points for inquiry' },
+    { label: 'Modes', value: 'Identify, Icy synthesis, and Ask' },
+    { label: 'Inputs', value: 'Camera, touch, and speech' },
+    { label: 'Interaction', value: 'Point, scan, interpret, continue the question' },
+  ]}
+  purposeTitle="Go beyond the label without making the first action complicated."
+  purposeCopy={[
+    'Object recognition is useful, but a name is often where curiosity begins rather than where it ends. IcySense keeps the first interaction simple while making deeper context available as a distinct mode.',
+    'The product can answer “what is it?”, connect the subject to origin, mechanism, matter, relationships, time, and larger systems, or continue through a specific follow-up question.',
+  ]}
+  actions={[
+    'Start the camera and aim at an object in the environment.',
+    'Use Identify for a name, type, and quick facts.',
+    'Use Icy for a wider synthesis across origin, mechanism, relationships, and systems.',
+    'Ask a follow-up by touch or speech after the scan.',
+  ]}
+  implementation={[
+    'A camera-centered interface keeps the subject visible while modes and status remain close at hand.',
+    'The onboarding layer explains camera permission and the difference between the three inquiry paths before use.',
+    'Desktop and mobile share the same compact control model, with voice and touch treated as complementary inputs.',
+  ]}
+  distinctionTitle="The second question is designed into the first screen."
+  distinctionCopy="Identification, synthesis, and follow-up are presented as one continuous interaction rather than separate tools, encouraging curiosity beyond the initial recognition result."
+  nextHref={`${base}projects/energy-engine/`}
+  nextLabel="Energy Engine"
+/>

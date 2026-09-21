@@ -1,0 +1,45 @@
+---
+import LiveProjectCase from '../../components/LiveProjectCase.astro';
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+---
+
+<LiveProjectCase
+  title="Photogression"
+  description="A case study of Photogression, a field journal that teaches photography through thirteen repeatable ways of seeing."
+  eyebrow="Case study / Photogression"
+  headline="A photography journal organized around ways of seeing."
+  summary="Photogression replaces the pressure to collect impressive images with a quieter practice: choose a lens, notice a specific visual relationship, and build a record over time."
+  tags={['Perception practice', 'Local collection', 'Mobile-first capture']}
+  liveUrl="https://photogression.icynatural.now"
+  desktopImage={`${base}images/projects/photogression/desktop-landing.png`}
+  mobileImage={`${base}images/projects/photogression/mobile-landing.png`}
+  desktopAlt="Photogression home screen with a current lens, ways of seeing, library, and progress links"
+  mobileAlt="Photogression mobile home screen showing the current photographic lens and capture navigation"
+  visualCaption="The field-journal home screen makes the current lens, the next observation, the wider set of lenses, and personal progress visible together."
+  details={[
+    { label: 'Purpose', value: 'Turn photography into a repeatable attention practice' },
+    { label: 'Structure', value: '13 lenses with collections and progress' },
+    { label: 'Core loop', value: 'Choose a lens, capture, reflect, revisit' },
+    { label: 'Storage', value: 'Personal observations remain in a portable local library' },
+  ]}
+  purposeTitle="Teach looking before judging the photograph."
+  purposeCopy={[
+    'The application frames photography as perceptual training. Each lens narrows attention to a relationship—light, reflection, pattern, texture, color, boundaries, and more—so the act of seeing has a concrete prompt.',
+    'A library and progress view turn isolated captures into an ongoing field journal. The result is less like a social feed and more like a private practice that develops through repetition.',
+  ]}
+  actions={[
+    'Choose among thirteen lenses for a focused observation.',
+    'Open a lens to read its prompt and begin a capture.',
+    'Store observations in a personal library organized by way of seeing.',
+    'Review progress across lenses and continue an unfinished practice.',
+  ]}
+  implementation={[
+    'A responsive application shell keeps Explore, Capture, Library, and Progress available as the persistent product model.',
+    'Lens cards use concise instructional language rather than technical photography terminology.',
+    'Local collection and import affordances support a personal, portable record without turning the experience into a public feed.',
+  ]}
+  distinctionTitle="Progress is measured in attention, not applause."
+  distinctionCopy="The product’s unit of growth is a way of seeing. Counts, prompts, and collections make practice visible while keeping the subject and the observer at the center."
+  nextHref={`${base}projects/sun-earth-horizon/`}
+  nextLabel="Sun · Earth · Horizon"
+/>

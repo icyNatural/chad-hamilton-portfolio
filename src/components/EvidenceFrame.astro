@@ -1,0 +1,129 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  label: string;
+  caption: string;
+  width: number;
+  height: number;
+  tone?: 'light' | 'dark';
+  eager?: boolean;
+}
+
+const {
+  src,
+  alt,
+  label,
+  caption,
+  width,
+  height,
+  tone = 'dark',
+  eager = false,
+} = Astro.props;
+
+const viewerId = `viewer-${label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}-${width}x${height}`;
+---
+
+<figure class:list={['evidence-frame', `evidence-frame--${tone}`]}>
+  <div class="evidence-frame__bar">
+    <span class="evidence-frame__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span>{label}</span>
+    <span class="evidence-frame__state">Product view</span>
+  </div>
+  <button
+    class="evidence-frame__media evidence-frame__open"
+    type="button"
+    aria-haspopup="dialog"
+    aria-controls={viewerId}
+    aria-label={`Enlarge screenshot: ${label}`}
+    data-image-viewer-open={viewerId}
+  >
+    <img
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      loading={eager ? 'eager' : 'lazy'}
+      decoding="async"
+    />
+    <span class="evidence-frame__zoom-cue">Enlarge <span aria-hidden="true">↗</span></span>
+  </button>
+  <figcaption>
+    <span>{caption}</span>
+    <a href={src} target="_blank" rel="noopener noreferrer">Open original image <span aria-hidden="true">↗</span></a>
+  </figcaption>
+</figure>
+
+<dialog class="image-viewer" id={viewerId} aria-label={`${label} full-size screenshot`} data-image-viewer>
+  <div class="image-viewer__header">
+    <div>
+      <strong>{label}</strong>
+      <span>Use zoom controls, pinch zoom, or scroll to inspect details.</span>
+    </div>
+    <div class="image-viewer__actions">
+      <button type="button" data-image-viewer-zoom-out aria-label="Zoom out">−</button>
+      <button type="button" data-image-viewer-zoom-in aria-label="Zoom in">+</button>
+      <a href={src} target="_blank" rel="noopener noreferrer">Original <span aria-hidden="true">↗</span></a>
+      <button class="image-viewer__close" type="button" data-image-viewer-close>Close <span aria-hidden="true">×</span></button>
+    </div>
+  </div>
+  <div class="image-viewer__viewport" data-image-viewer-viewport>
+    <img src={src} alt={alt} width={width} height={height} data-image-viewer-image />
+  </div>
+</dialog>
+
+<script>
+  const initializeImageViewers = () => {
+    document.querySelectorAll('[data-image-viewer-open]').forEach((opener) => {
+      if (!(opener instanceof HTMLButtonElement) || opener.dataset.viewerReady === 'true') return;
+      opener.dataset.viewerReady = 'true';
+
+      const dialog = document.getElementById(opener.dataset.imageViewerOpen ?? '');
+      if (!(dialog instanceof HTMLDialogElement)) return;
+
+      const image = dialog.querySelector('[data-image-viewer-image]');
+      const viewport = dialog.querySelector('[data-image-viewer-viewport]');
+      const closeButton = dialog.querySelector('[data-image-viewer-close]');
+      const zoomIn = dialog.querySelector('[data-image-viewer-zoom-in]');
+      const zoomOut = dialog.querySelector('[data-image-viewer-zoom-out]');
+      let zoom = 1;
+
+      const fitImage = () => {
+        if (!(image instanceof HTMLImageElement) || !(viewport instanceof HTMLElement)) return;
+        const naturalWidth = image.naturalWidth || Number(image.getAttribute('width')) || 1;
+        const naturalHeight = image.naturalHeight || Number(image.getAttribute('height')) || 1;
+        zoom = Math.min(1, viewport.clientWidth / naturalWidth, viewport.clientHeight / naturalHeight);
+        image.style.width = `${Math.max(1, naturalWidth * zoom)}px`;
+      };
+
+      const setZoom = (nextZoom) => {
+        if (!(image instanceof HTMLImageElement)) return;
+        const naturalWidth = image.naturalWidth || Number(image.getAttribute('width')) || 1;
+        zoom = Math.min(3, Math.max(.1, nextZoom));
+        image.style.width = `${naturalWidth * zoom}px`;
+      };
+
+      const returnFocus = () => requestAnimationFrame(() => opener.focus());
+
+      opener.addEventListener('click', () => {
+        dialog.showModal();
+        document.body.classList.add('image-viewer-open');
+        requestAnimationFrame(fitImage);
+      });
+      closeButton?.addEventListener('click', () => dialog.close());
+      zoomIn?.addEventListener('click', () => setZoom(zoom * 1.25));
+      zoomOut?.addEventListener('click', () => setZoom(zoom / 1.25));
+      dialog.addEventListener('cancel', () => dialog.close());
+      dialog.addEventListener('close', () => {
+        document.body.classList.remove('image-viewer-open');
+        returnFocus();
+      });
+      dialog.addEventListener('click', (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+    });
+  };
+
+  initializeImageViewers();
+  document.addEventListener('astro:page-load', initializeImageViewers);
+</script>

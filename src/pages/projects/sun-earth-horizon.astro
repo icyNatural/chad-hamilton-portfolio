@@ -1,0 +1,45 @@
+---
+import LiveProjectCase from '../../components/LiveProjectCase.astro';
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+---
+
+<LiveProjectCase
+  title="Sun · Earth · Horizon"
+  description="A case study of Sun · Earth · Horizon, an interactive astronomy experience built around a rotatable planet and guided phenomena."
+  eyebrow="Case study / Sun · Earth · Horizon"
+  headline="An astronomy lesson you can rotate, watch, and explore."
+  summary="Sun · Earth · Horizon uses a real-time globe as the primary teaching surface. Instead of separating explanation from diagram, the simulation lets motion, light, and atmosphere carry the lesson."
+  tags={['3D simulation', 'Guided learning', 'Direct manipulation']}
+  liveUrl="https://wonder.icynatural.now"
+  desktopImage={`${base}images/projects/wonder/desktop-landing.png`}
+  mobileImage={`${base}images/projects/wonder/mobile-landing.png`}
+  desktopAlt="Sun Earth Horizon desktop simulation with a large illuminated globe, Earth, Sun, and Atmosphere controls"
+  mobileAlt="Sun Earth Horizon mobile simulation with the globe and guided experience controls"
+  visualCaption="The globe occupies the center of the experience while a small control set exposes Earth, Sun, atmosphere, guided phenomena, and simulation speed."
+  details={[
+    { label: 'Purpose', value: 'Make astronomical relationships visible through motion' },
+    { label: 'Interaction', value: 'Rotate the planet and choose guided phenomena' },
+    { label: 'Subjects', value: 'Sunrise, solar wind, scattering, and atmosphere' },
+    { label: 'Presentation', value: 'Full-screen 3D scene with minimal controls' },
+  ]}
+  purposeTitle="Use the simulation itself as the explanation."
+  purposeCopy={[
+    'Astronomy concepts often depend on relationships that are difficult to understand in a flat diagram: rotation, viewpoint, moving light, atmospheric effects, and differences in scale.',
+    'This experience gives those relationships a shared stage. A visitor can freely rotate the planet or enter a guided phenomenon, keeping the explanatory text close to the event it describes.',
+  ]}
+  actions={[
+    'Drag to rotate the planet and change the viewing angle.',
+    'Switch attention between Earth, the Sun, and the atmosphere.',
+    'Launch a guided phenomenon from the main experience control.',
+    'Adjust the simulation speed to make slow astronomical motion observable.',
+  ]}
+  implementation={[
+    'A full-viewport 3D scene establishes the globe as the primary interface rather than a decorative backdrop.',
+    'Controls are deliberately sparse and placed around the scene to preserve scale and immersion.',
+    'Responsive layouts retain the same world model on desktop and mobile instead of replacing it with a static illustration.',
+  ]}
+  distinctionTitle="The model remains present while the lesson unfolds."
+  distinctionCopy="The product does not send visitors from text to diagram and back again. Explanation, viewpoint, and motion stay inside one continuous scene."
+  nextHref={`${base}projects/icysense/`}
+  nextLabel="IcySense"
+/>
