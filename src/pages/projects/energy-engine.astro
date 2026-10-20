@@ -1,231 +1,111 @@
 ---
-import EvidenceFrame from '../../components/EvidenceFrame.astro';
-import FeatureBlock from '../../components/FeatureBlock.astro';
-import Layout from '../../layouts/Layout.astro';
-
-const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
-
-const surfaces = [
-  {
-    index: '01',
-    eyebrow: 'Observatory',
-    title: 'A legible state before data arrives',
-    description: 'The landing surface gives an incomplete day a useful shape: current phase, recovery state, energy field, and a suggested next action remain readable before every signal is available.',
-    items: ['Current phase and timing', 'Recovery and signal status', 'Suggested next action'],
-  },
-  {
-    index: '02',
-    eyebrow: 'Instruments',
-    title: 'Signals organized by physiological role',
-    description: 'The Instrument Room groups sleep, recovery, activity, respiration, and cognition so each signal can be read by physiological role rather than as an undifferentiated dashboard.',
-    items: ['Sleep architecture', 'HRV and resting heart rate', 'Movement load and breath rhythm'],
-  },
-  {
-    index: '03',
-    eyebrow: 'Atlas',
-    title: 'Daily observations become recurring traces',
-    description: 'The Pattern Atlas is the longitudinal view: a place for daily metrics to accumulate into recognizable rhythms, changes, and recurring conditions over time.',
-    items: ['Recurring trace surface', 'Daily observation history', 'Longitudinal pattern view'],
-  },
-  {
-    index: '04',
-    eyebrow: 'System',
-    title: 'Local data stays understandable and portable',
-    description: 'The System route brings browser storage, import/export, historical memory, manual entry, and Android Health Connect settings into one maintenance surface.',
-    items: ['Local JSON import/export', 'Historical archive kept separate from scoring', 'Browser and Android behavior distinguished'],
-  },
-];
 ---
 
-<Layout
-  title="Energy Engine case study — Chad Hamilton"
-  description="A case study of Energy Engine, a personal physiology observatory for energy, recovery, rhythm, and change over time."
->
-  <article class="case-study">
-    <header class="case-hero section-pad">
-      <div class="shell">
-        <a class="back-link" href={`${base}#work`}><span aria-hidden="true">←</span> Selected work</a>
-        <div class="case-hero__grid">
-          <div>
-            <p class="eyebrow">Case study / Energy Engine</p>
-            <h1>A physiology observatory for reading rhythm, recovery, and change.</h1>
-          </div>
-          <div class="case-hero__summary">
-            <p>Energy Engine organizes a changing physiological picture into four connected rooms: the present state, contributing signals, recurring patterns, and the data controls behind them.</p>
-            <div class="tag-row">
-              <span>Physiology interface</span>
-              <span>Local-first data</span>
-              <span>Responsive web app</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+<main>
+ <a class="back" href="/">&larr; Back</a>
 
-    <section class="case-visual shell">
-      <EvidenceFrame
-        src={`${base}images/projects/energy/desktop-landing.png`}
-        alt="Energy Engine Observatory showing an untracked phase, no recovery signal, and an energy field awaiting telemetry"
-        label="Physiology Observatory / Desktop"
-        caption="The Observatory keeps phase, recovery, energy, and the next useful action visible even before a day has enough signals to interpret."
-        width={1440}
-        height={1000}
-        eager={true}
-      />
-    </section>
+  <section class="project">
+    <p class="eyebrow">PROJECT SYSTEM</p>
 
-    <section class="case-facts section-pad-sm">
-      <div class="shell case-facts__grid">
-        <div><span class="eyebrow">Role</span><strong>Design, prototyping, systems documentation</strong></div>
-        <div><span class="eyebrow">Experience</span><strong>Responsive observatory with four connected surfaces</strong></div>
-        <div><span class="eyebrow">Inputs</span><strong>Manual observations and Android-connected signals</strong></div>
-        <div><span class="eyebrow">Data model</span><strong>Present state, instruments, patterns, and local controls</strong></div>
-      </div>
-    </section>
+    <h1>Energy Engine</h1>
 
-    <section class="section-pad section-rule">
-      <div class="shell narrative-grid">
-        <div>
-          <p class="eyebrow">Context / 01</p>
-          <h2>Make a changing state useful before it becomes complete.</h2>
-        </div>
-        <div class="prose">
-          <p>Energy is rarely one signal. Sleep, time awake, recovery, movement, breath, and daily context can point in different directions, and their meaning changes as the day unfolds.</p>
-          <p>The observatory metaphor gives those layers separate responsibilities. The opening view answers “where am I now?”, Instruments shows what contributes to that state, Atlas looks for repetition over time, and System keeps the underlying data manageable.</p>
-          <p class="callout"><strong>Design principle:</strong> when information is missing, the interface stays useful through clear status, manual input, and a concrete next action rather than forcing a definitive score.</p>
-        </div>
-      </div>
-    </section>
+    <p class="intro">
+      A physiological and behavioral state system focused on adaptive interpretation
+      of human energy patterns through sleep architecture, HRV, activity,
+      recovery dynamics, temporal phase modeling, and contextual state awareness.
+    </p>
 
-    <section class="section-pad section-dark">
-      <div class="shell">
-        <div class="section-heading section-heading--light section-heading--split">
-          <div>
-            <p class="eyebrow">System surfaces / 02</p>
-            <h2>Four rooms, each with a distinct responsibility.</h2>
-          </div>
-          <p>The system’s information architecture keeps immediate interpretation, signal inspection, longitudinal patterns, and maintenance controls separate.</p>
-        </div>
-        <div class="feature-grid feature-grid--case">
-          {surfaces.map((surface) => <FeatureBlock {...surface} />)}
-        </div>
-      </div>
-    </section>
+    <div class="gallery">
+      <img src="/images/energy-engine/energyengine.png" alt="Energy Engine Screenshot">
+      <img src="/images/energy-engine/energyengine1.png" alt="Energy Engine Screenshot">
+      <img src="/images/energy-engine/energyengine2.png" alt="Energy Engine Screenshot">
+    </div>
+  </section>
+</main>
 
-    <section class="section-pad section-rule">
-      <div class="shell">
-        <div class="section-heading section-heading--split">
-          <div>
-            <p class="eyebrow">Responsive experience / 03</p>
-            <h2>Desktop structure, mobile continuity.</h2>
-          </div>
-          <p>Desktop creates room for comparison across instruments. Mobile preserves the same navigation and state language while turning each room into a focused vertical reading.</p>
-        </div>
+<style>
+  body {
+    margin: 0;
 
-        <div class="evidence-pair">
-          <EvidenceFrame
-            src={`${base}images/projects/energy/desktop-instruments.png`}
-            alt="Desktop Energy Engine Instrument Room in a manual and unlinked browser state"
-            label="Instruments / Desktop"
-            caption="Signal categories are organized by role, with manual and connected states visible where decisions are made."
-            width={1440}
-            height={1196}
-          />
-          <EvidenceFrame
-            src={`${base}images/projects/energy/mobile-instruments.png`}
-            alt="Mobile Energy Engine Instrument Room with sleep, recovery, activity, respiration, and cognition controls"
-            label="Instruments / Mobile"
-            caption="The same instrument model becomes a clear vertical sequence on mobile."
-            width={390}
-            height={904}
-            tone="light"
-          />
-        </div>
+    background:
+      radial-gradient(circle at top right,
+      rgba(96,165,250,0.12), transparent 30%),
 
-        <div class="evidence-pair evidence-pair--reverse">
-          <EvidenceFrame
-            src={`${base}images/projects/energy/mobile-atlas.png`}
-            alt="Mobile Pattern Atlas empty state asking for daily metrics"
-            label="Atlas / Mobile"
-            caption="The mobile Atlas explains what daily observations will become before a recurring trace is available."
-            width={390}
-            height={844}
-            tone="light"
-          />
-          <EvidenceFrame
-            src={`${base}images/projects/energy/desktop-atlas.png`}
-            alt="Desktop Pattern Atlas empty state with no observations"
-            label="Atlas / Desktop"
-            caption="The desktop Atlas holds space for recurring traces while keeping the next step easy to understand."
-            width={1440}
-            height={1000}
-          />
-        </div>
-      </div>
-    </section>
+      linear-gradient(to bottom, #060816, #02040b);
 
-    <section class="section-pad system-section">
-      <div class="shell system-section__grid">
-        <div class="system-section__copy">
-          <p class="eyebrow">Data and platform / 04</p>
-          <h2>Manual observations and connected signals share one model.</h2>
-          <p>The System surface keeps local browser data usable on its own while describing the Android path for automatic signals through Samsung Health and Health Connect.</p>
-          <ul class="check-list">
-            <li>Manual entries take precedence over automatic values.</li>
-            <li>Historical archive observations are stored apart from live scoring.</li>
-            <li>Extended context is labeled as not used in scoring.</li>
-            <li>The interface states that nothing is written back through Health Connect.</li>
-          </ul>
-          <p class="fine-print">The browser experience remains useful through manual entry; the Android host extends the same system with connected health signals.</p>
-        </div>
-        <EvidenceFrame
-          src={`${base}images/projects/energy/mobile-system.png`}
-          alt="Long mobile System Controls page showing local data, historical memory, and Health Connect sections"
-          label="System controls / Mobile"
-          caption="Full-page capture of the empty browser state. The interface reports zero days on file and no archive imported."
-          width={390}
-          height={5146}
-          tone="light"
-        />
-      </div>
-    </section>
+    color: #eef2ff;
+    font-family: Arial, sans-serif;
+  }
 
-    <section class="section-pad section-rule">
-      <div class="shell outcome-grid">
-        <div>
-          <p class="eyebrow">Product qualities / 05</p>
-          <h2>A calm interface for incomplete, personal data.</h2>
-        </div>
-        <div class="outcome-grid__lists">
-          <div>
-            <h3>What the design prioritizes</h3>
-            <ul>
-              <li>Separate views for state, signals, patterns, and maintenance</li>
-              <li>Useful guidance when data is incomplete</li>
-              <li>Manual observations beside connected-signal states</li>
-              <li>Local import, export, and reset controls</li>
-              <li>Responsive continuity from desktop to mobile</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Responsible product boundaries</h3>
-            <ul>
-              <li>A personal observation tool, not a medical diagnosis</li>
-              <li>Interpretations stay connected to their contributing signals</li>
-              <li>Manual values take precedence when intentionally entered</li>
-              <li>Historical context remains separate from live scoring</li>
-              <li>Connected health data is read, not written back</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+  main {
+    padding: 70px 10%;
+  }
 
-    <nav class="case-next" aria-label="Project navigation">
-      <div class="shell case-next__inner">
-        <span>Next project</span>
-        <a href={`${base}projects/semantic-archaeology/`}>Semantic Archaeology <span aria-hidden="true">→</span></a>
-      </div>
-    </nav>
-  </article>
-</Layout>
+  .back {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .project {
+    margin-top: 40px;
+    max-width: 1200px;
+  }
+
+  .eyebrow {
+    color: #60a5fa;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: clamp(58px, 8vw, 110px);
+    margin: 20px 0;
+    line-height: 0.95;
+  }
+
+  .intro {
+    font-size: 22px;
+    line-height: 1.7;
+    color: #a5b4d4;
+    max-width: 850px;
+    margin-bottom: 50px;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .gallery img {
+    width: 100%;
+
+    border-radius: 28px;
+
+    border:
+      1px solid rgba(96,165,250,0.16);
+
+    box-shadow:
+      0 0 30px rgba(96,165,250,0.08),
+      0 0 70px rgba(139,92,246,0.08);
+  }
+
+  @media (max-width: 700px) {
+
+    main {
+      padding: 60px 7%;
+    }
+
+    h1 {
+      font-size: 52px;
+    }
+
+    .intro {
+      font-size: 18px;
+    }
+  }
+</style>
+```
