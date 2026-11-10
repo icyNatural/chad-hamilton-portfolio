@@ -1,0 +1,88 @@
+---
+import { careerProjects, careerTracks, type CareerTrackId } from '../data/career-projects';
+interface Props { track: CareerTrackId }
+const { track } = Astro.props;
+const selection = careerTracks[track];
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+---
+<div class="career-track">
+  <header class="shell section-pad career-intro">
+    <nav aria-label="Portfolio directions" class="career-links">
+      <a href={base}>Home</a><a href={`${base}engineering/`}>Engineering index</a>
+      {Object.entries(careerTracks).map(([id, value]) => <a href={`${base}${id}/`} aria-current={id === track ? 'page' : undefined}>{value.title}</a>)}
+    </nav>
+    <p class="eyebrow">Independent projects / November 2026 evidence review</p>
+    <h1>{selection.title}</h1>
+    <p class="hero__lede">{selection.intro}</p>
+    <p class="career-note">Historical receipts are not fresh executions. Source inspection establishes implementation, not correctness, original authorship, public deployment or physical-device acceptance. Project evidence below was reviewed November 10, 2026; no project suites were rerun for that review.</p>
+    <nav aria-label="Projects on this page"><ol class="career-jump">{selection.projects.map(id => <li><a href={`#${id}`}>{careerProjects[id].name}</a></li>)}</ol></nav>
+  </header>
+  <div class="shell career-projects">
+    {selection.projects.map((id, index) => {
+      const project = careerProjects[id];
+      return <article id={id} aria-labelledby={`${id}-title`} class="career-project">
+        <header>
+          <p class="eyebrow">Project {String(index + 1).padStart(2, '0')} / {selection.projects.length}</p>
+          <h2 id={`${id}-title`}>{project.name}</h2>
+          <ul class="career-stack" aria-label="Technology stack">{project.stack.map(item => <li>{item}</li>)}</ul>
+        </header>
+        <div class="career-columns">
+          <div>
+            <h3>Problem & challenge</h3><p>{project.problem}</p>
+            <h3>Architecture & what I built</h3><p>{project.built}</p>
+            <figure class="career-diagram" aria-labelledby={`${id}-diagram-caption`}>
+              <ol>{project.diagram.map(step => <li>{step}</li>)}</ol>
+              <figcaption id={`${id}-diagram-caption`}>Explanatory architecture diagram — synthetic HTML summary, not a runtime capture or proof of execution. Read the conceptual flow in numbered order.</figcaption>
+            </figure>
+            <h3>Personal contribution</h3><p>{project.contribution}</p>
+          </div>
+          <div class="career-evidence">
+            <h3>Evidence & scope</h3><p class="career-date">{project.evidenceDate}</p><p>{project.evidence}</p>
+            <h3>Privacy & status</h3><p><strong>{project.status}</strong></p><p>{project.limits}</p>
+            <p class="career-note">No private source links, operational data or private screenshots are published here. Physical-device acceptance is not established unless explicitly stated.</p>
+            {(project.caseSlug || project.publicUrl) && <div class="career-links" aria-label={`${project.name} links`}>
+              {project.caseSlug && <a href={`${base}projects/${project.caseSlug}/`}>Existing case study: {project.name}</a>}
+              {project.publicUrl && <a href={project.publicUrl}>Public Photogression app</a>}
+            </div>}
+            {project.caseSlug && <p class="career-note">The existing case may reflect an older audit. The dated evidence above is the November career review, not a claim that the older page was updated.</p>}
+          </div>
+        </div>
+      </article>;
+    })}
+  </div>
+  <aside class="shell section-pad-sm career-close" aria-label="More engineering context"><p>For broader context, explore the <a href={`${base}engineering/`}>engineering index</a> or return to <a href={`${base}#work`}>selected work</a>. Resume downloads are not published on these track pages.</p></aside>
+</div>
+
+<style>
+  .career-track { overflow-wrap: anywhere; }
+  .career-intro h1 { margin-block: 1rem 1.5rem; }
+  .career-intro .hero__lede { max-width: 52rem; }
+  .career-links { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-bottom: 2rem; }
+  .career-links a, .career-jump a { display: inline-flex; align-items: center; min-height: 44px; text-underline-offset: .22em; }
+  a[aria-current="page"] { font-weight: 700; text-decoration-thickness: 3px; }
+  .career-note { color: var(--ink-muted); font-size: .9rem; max-width: 58rem; }
+  .career-jump { display: flex; flex-wrap: wrap; gap: .5rem 2rem; margin: 2rem 0 0; padding-left: 1.4rem; }
+  .career-project { border-top: 1px solid var(--line); padding-block: clamp(2.5rem, 6vw, 5rem); scroll-margin-top: 10rem; }
+  .career-project h2 { max-width: 58rem; margin-block: .75rem 1.5rem; font-size: clamp(2.2rem, 5vw, 3.6rem); }
+  .career-project h3 { font-family: var(--font-sans); font-size: 1.05rem; margin-block: 1.75rem .5rem; font-weight: 700; }
+  .career-project p { margin-block: .5rem 1.25rem; }
+  .career-stack { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; margin: 0 0 1.5rem; list-style: none; }
+  .career-stack li { border: 1px solid var(--line); padding: .25rem .65rem; font: .8rem/1.6 var(--font-mono); }
+  .career-columns { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); }
+  .career-columns > div { min-width: 0; }
+  .career-evidence { border-left: 1px solid var(--line); padding-left: clamp(1.25rem, 3vw, 2.5rem); }
+  .career-date { font: .85rem/1.65 var(--font-mono); color: var(--ink-muted); }
+  .career-diagram { margin: 2rem 0; padding: clamp(1rem, 3vw, 1.5rem); background: var(--paper-strong); border: 1px solid var(--line); }
+  .career-diagram ol { padding-left: 1.6rem; margin: 0; }
+  .career-diagram li { padding: .75rem .5rem; border-bottom: 1px solid var(--line); }
+  .career-diagram li:last-child { border: 0; }
+  .career-diagram li::marker { color: var(--ink-muted); font-family: var(--font-mono); }
+  .career-diagram figcaption { margin-top: 1.25rem; color: var(--ink-muted); font-size: .8rem; }
+  .career-close { border-top: 1px solid var(--line); }
+  .career-track a:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+  @media (max-width: 800px) {
+    .career-columns { grid-template-columns: minmax(0, 1fr); gap: .5rem; }
+    .career-evidence { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; }
+    .career-jump { display: block; }
+  }
+</style>
