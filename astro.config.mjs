@@ -7,7 +7,9 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  base: '/chad-hamilton-portfolio',
+  site: 'https://tech.icyclearer.com',
+  base: '/',
+  trailingSlash: 'always',
   integrations: [react()],
 
   vite: {

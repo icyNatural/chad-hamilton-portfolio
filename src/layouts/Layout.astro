@@ -1,6 +1,7 @@
 ---
 import Navigation from '../components/Navigation.astro';
 import '../styles/global.css';
+import '../styles/tech.css';
 
 interface Props {
   title?: string;
@@ -8,11 +9,12 @@ interface Props {
 }
 
 const {
-  title = 'Chad Hamilton — Systems Designer & Builder',
-  description = 'Interactive systems work across physiology, language, perception, automation, and experimental software.',
+  title = 'ICY TECH — Chad Hamilton | Independent Engineering',
+  description = 'Chad Hamilton’s independent engineering portfolio: software, security, and systems. Technical experiments, implementation decisions, and documented project evidence.',
 } = Astro.props;
 
 const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : undefined;
 ---
 
 <!doctype html>
@@ -21,38 +23,45 @@ const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="theme-color" content="#f1efe8" />
+    <meta name="theme-color" content="#111b20" />
     <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
     <link rel="icon" href={`${base}favicon.ico`} />
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
+    <meta name="author" content="Chad Hamilton" />
+    {canonical && <link rel="canonical" href={canonical} />}
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ICY TECH / Chad Hamilton" />
+    <meta property="og:locale" content="en_US" />
+    {canonical && <meta property="og:url" content={canonical} />}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
   </head>
-  <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
+  <body class="tech-site">
+    <a class="tech-skip-link" href="#main-content">Skip to content</a>
     <Navigation />
-    <main id="main-content"><slot /></main>
-    <footer class="site-footer">
-      <div class="shell site-footer__inner">
+    <main class="tech-main" id="main-content" tabindex="-1"><slot /></main>
+    <footer class="tech-footer">
+      <div class="tech-shell tech-footer__inner">
         <div>
-          <p class="eyebrow">Build carefully. Make complexity legible.</p>
-          <p class="site-footer__statement">Interactive systems for observing, learning, and thinking more clearly.</p>
+          <p class="tech-eyebrow">ICY TECH / Chad Hamilton</p>
+          <p class="tech-footer__statement">Build with intent.<br />Make the work inspectable.</p>
+          <p class="tech-footer__description">Personal, independent engineering across software, security, and systems.</p>
         </div>
-        <div class="site-footer__links">
-          <a href="mailto:Chadnatural1@gmail.com">Email</a>
-          <a href="https://github.com/icyNatural" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-          <a href={`${base}#work`}>Selected work</a>
+        <div class="tech-footer__links">
+          <span class="tech-eyebrow">Connect / inspect</span>
+          <a href="mailto:Justchadham@gmail.com">Justchadham@gmail.com</a>
+          <a href="https://github.com/icyNatural">GitHub / icyNatural <span aria-hidden="true">↗</span></a>
+          <a href={`${base}projects/`}>Explore projects <span aria-hidden="true">→</span></a>
         </div>
       </div>
-      <div class="shell site-footer__meta">
+      <div class="tech-shell tech-footer__meta">
         <span>© {new Date().getFullYear()} Chad Hamilton</span>
-        <span>Astro / GitHub Pages</span>
+        <span>Independent work. Documented decisions.</span>
       </div>
     </footer>
   </body>

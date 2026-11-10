@@ -1,25 +1,33 @@
 ---
 const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
-const homeHref = base;
-const currentPath = Astro.url.pathname;
-const isProject = currentPath.includes('/projects/');
+const currentPath = Astro.url.pathname.replace(/\/$/, '');
+const links = [
+  { label: 'Home', path: '' },
+  { label: 'Projects', path: 'projects/' },
+  { label: 'Software', path: 'software/' },
+  { label: 'Security', path: 'security/' },
+  { label: 'Systems', path: 'systems/' },
+];
+const isCurrent = (path: string) => {
+  const target = `${base}${path}`.replace(/\/$/, '');
+  return currentPath === target || (path !== '' && currentPath.startsWith(`${target}/`));
+};
 ---
 
-<header class="site-header">
-  <div class="shell site-header__inner">
-    <a class="wordmark" href={homeHref} aria-label="Chad Hamilton portfolio home">
-      <span class="wordmark__mark" aria-hidden="true">CH</span>
-      <span>
-        <strong>Chad Hamilton</strong>
-        <small>Systems designer & builder</small>
+<header class="tech-header">
+  <div class="tech-shell tech-header__inner">
+    <a class="tech-brand" href={base} aria-label="ICY TECH — Chad Hamilton, home">
+      <span class="tech-brand__mark" aria-hidden="true">i / t</span>
+      <span class="tech-brand__text">
+        <strong>ICY TECH<span aria-hidden="true">_</span></strong>
+        <small>Chad Hamilton / Independent engineering</small>
       </span>
     </a>
 
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a href={`${base}#work`} aria-current={isProject ? 'page' : undefined}>Work</a>
-      <a href={`${base}#approach`}>Approach</a>
-      <a href={`${base}#about`}>About</a>
-      <a class="site-nav__contact" href="mailto:Chadnatural1@gmail.com">Contact</a>
+    <nav class="tech-nav" aria-label="Primary navigation">
+      {links.map(({ label, path }) => (
+        <a href={`${base}${path}`} aria-current={isCurrent(path) ? 'page' : undefined}>{label}</a>
+      ))}
     </nav>
   </div>
 </header>

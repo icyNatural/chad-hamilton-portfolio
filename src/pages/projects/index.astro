@@ -1,0 +1,7 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {techProjects} from '../../data/tech-projects';
+import ProjectCard from '../../components/TechProjectCard.astro';
+import Ecosystem from '../../components/TechEcosystem.astro';
+---
+<Layout title="Project Ecosystem — ICY TECH / Chad Hamilton" description="Audited creative computation, AI, automation, security and infrastructure."><section class="tech-shell tech-hero"><p class="tech-eyebrow">The technical ecosystem</p><h1>Explore the systems.</h1><p class="tech-lead">Ranked by engineering depth, demonstrable behavior and judgment—not line count. Public case studies are deliberately separate from private runtimes.</p><p>Every case includes architecture, implementation evidence, demonstration status and limitations. Public source is linked only where its visibility and relevance are established.</p></section><section class="tech-shell tech-section"><div class="tech-grid">{techProjects.map(project=><ProjectCard project={project}/>)}</div></section><section class="tech-shell tech-section"><Ecosystem /></section></Layout>

@@ -1,0 +1,13 @@
+---
+import type {TechProject} from '../data/tech-projects';
+interface Props { project: TechProject }
+const {project} = Astro.props;
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+---
+<article class="tech-card">
+  <div class="tech-eyebrow">{String(project.rank).padStart(2,'0')} / {project.category}</div>
+  {project.image && <figure><img src={`${base}${project.image}`} alt={project.imageCaption} loading="lazy" width="1000" height="650" style="width:100%;height:200px;object-fit:cover;object-position:top"/><figcaption class="tech-muted">{project.slug==='visual-lab'?'Actual synthetic scene render':'Actual cropped browser test capture'}</figcaption></figure>}
+  <h3><a href={`${base}projects/${project.slug}/`}>{project.name}</a></h3><p>{project.summary}</p>
+  <ul class="tech-tags" aria-label="Technologies">{project.stack.slice(0,5).map(item => <li>{item}</li>)}</ul>
+  <p class="tech-status">{project.live ? 'Public app + newer local work · see deployment limits' : 'Local system · public technical case study'}</p><a href={`${base}projects/${project.slug}/`}>Implementation, evidence & limitations →</a>
+</article>

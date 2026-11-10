@@ -1,0 +1,13 @@
+---
+import {getProject} from '../data/tech-projects';
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+const groups = [
+  {id:'creative',title:'Create & construct',description:'Editable scenes, media and deliberate authoring workflows.',slugs:['visual-lab','clip-pipeline','photogression-spatial']},
+  {id:'evidence',title:'Observe & reason',description:'Evidence models, uncertain retrieval and qualified scientific exploration.',slugs:['discovery-lab','music-archive','fieldwork','orient','speech','inquiry','interface-atlas']},
+  {id:'infrastructure',title:'Connect & operate',description:'Events, permissions, recovery and owned service lifecycles.',slugs:['control','fabric']},
+];
+---
+<div data-ecosystem><p class="tech-eyebrow">A public-safe ecosystem map</p><h2>Different tools.<br />Shared engineering concerns.</h2><p>A hand-curated conceptual map inspired by the registry’s relationship-first approach—not a live ICY ALL feed or a claim that every pair is integrated. No private services or machine inventory are connected.</p><div class="tech-linkrow" aria-label="Filter ecosystem"><button class="tech-button" data-group="all" aria-pressed="true">All concerns</button>{groups.map(group => <button class="tech-button" data-group={group.id} aria-pressed="false">{group.title}</button>)}</div><div class="tech-grid">{groups.map(group => <section class="tech-card" data-ecosystem-group={group.id}><h3>{group.title}</h3><p>{group.description}</p><ul>{group.slugs.map(slug => {const project=getProject(slug);return <li><a href={`${base}projects/${slug}/`}>{project.name}</a></li>})}</ul></section>)}</div><p class="tech-note">Implemented links are narrower: the music resolver invokes branch-index; Fabric/Mind proofs have separately qualified runtime scope; Discovery Lab supports scene/evidence exchange. Related-project links express thematic relationships unless explicitly stated.</p></div>
+<script>
+document.querySelectorAll('[data-ecosystem]').forEach(root=>{root.querySelectorAll<HTMLButtonElement>('[data-group]').forEach(button=>button.addEventListener('click',()=>{root.querySelectorAll('[data-group]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));root.querySelectorAll<HTMLElement>('[data-ecosystem-group]').forEach(group=>{group.hidden=button.dataset.group!=='all'&&group.dataset.ecosystemGroup!==button.dataset.group;});}));});
+</script>

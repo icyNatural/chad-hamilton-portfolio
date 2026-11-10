@@ -2,9 +2,10 @@
 import Layout from '../../layouts/Layout.astro';
 import EvidenceFrame from '../../components/EvidenceFrame.astro';
 import { engineeringProjects } from '../../data/engineering-projects';
+import { techProjects } from '../../data/tech-projects';
 
 export function getStaticPaths() {
-  return engineeringProjects.map((project) => ({ params: { slug: project.slug }, props: { project } }));
+  return engineeringProjects.filter(project => !techProjects.some(current => current.slug === project.slug)).map((project) => ({ params: { slug: project.slug }, props: { project } }));
 }
 const { project } = Astro.props;
 const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
