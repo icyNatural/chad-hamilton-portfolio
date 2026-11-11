@@ -151,8 +151,9 @@ body.tech-site::before { content: none; }
 @media (max-width: 640px) {
   .tech-shell { width: calc(100% - 32px); }
   .tech-header__inner { padding-block: 1rem .65rem; }
-  .tech-nav { width: 100%; gap: .1rem; }
-  .tech-nav a { padding-inline: .6rem; font-size: .7rem; }
+  /* Six visible, full-size navigation targets on narrow phones; no horizontal scrolling. */
+  .tech-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; gap: .2rem; }
+  .tech-nav a { justify-content: center; min-width: 0; padding-inline: .2rem; font-size: .7rem; white-space: nowrap; }
   .tech-brand small { font-size: .64rem; }
   .tech-grid { grid-template-columns: minmax(0, 1fr); }
   .tech-hero { padding-block: 3.5rem; }
