@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import {techProjects} from '../data/tech-projects';
 import ProjectCard from '../components/TechProjectCard.astro';
 import Ecosystem from '../components/TechEcosystem.astro';
+import TechEducation from '../components/TechEducation.astro';
 const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
 ---
 <Layout title="ICY TECH — Chad Hamilton / Interconnected Technical Systems" description="Independent engineering across creative computation, AI, automation, security and infrastructure. Real implementations, evidence and honest limits.">
@@ -20,6 +21,7 @@ const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
     <p class="tech-linkrow"><a href={`${base}projects/`}>Explore all {techProjects.length} detailed cases →</a><a href={`${base}evidence/`}>Ranking and evidence standard →</a></p>
   </section>
   <section class="tech-section tech-shell" id="approach"><p class="tech-eyebrow">Engineering judgment</p><h2>Make complexity legible.<br />Keep authority bounded.</h2><div class="tech-grid"><article class="tech-card"><h3>Editable, not disposable</h3><p>Scenes, media decisions and investigations remain structured and revisable. A useful system survives its first impressive output.</p></article><article class="tech-card"><h3>Evidence, not theater</h3><p>Actual inference is not a mocked model. A private upload is not a publish-button test. A numerical comparison is not phone-sensor acceptance.</p></article><article class="tech-card"><h3>Recoverable by design</h3><p>Originals, derived state, permissions and replay are separate concerns. The interesting work lives at those boundaries.</p></article></div></section>
+  <TechEducation />
   <section class="tech-section tech-shell"><Ecosystem /></section>
   <section class="tech-section tech-shell" id="about"><p class="tech-eyebrow">The person behind the systems</p><h2>Technical depth.<br />An experimental point of view.</h2><p class="tech-lead">I’m Chad Hamilton. My independent work connects software engineering with creative practice, scientific tooling and local infrastructure. I build with coding agents and established libraries; these cases focus on implementation, integration and verification decisions I can substantiate.</p><p>My background includes customer-facing technical troubleshooting and a field IT internship. My cybersecurity and computer networking A.A.S. coursework is in progress. Independent projects are not presented as employment, production security certification or established scientific findings.</p><div class="tech-linkrow"><a class="tech-button" href="mailto:Justchadham@gmail.com">Let’s talk</a><a href="https://github.com/icyNatural">Public GitHub profile ↗</a><a href="https://icyclearer.com">Creative practice ↗</a></div><p class="tech-muted">One technical site. Three career entry points. The creative website remains separate.</p></section>
 </Layout>
