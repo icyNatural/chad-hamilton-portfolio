@@ -27,7 +27,7 @@ export const engineeringProjects: EngineeringProject[] = [
     evidence: ['Earlier validation recorded 48 core tests and 406 sky-position reference comparisons.', 'A separate Android UI run recorded 16 app and eight engine passes at 360 × 640dp.'],
     limits: 'The tested baseline does not establish accuracy for all devices; two UI checks failed in one screen run. Physical compass, GNSS and battery behavior still require testing.',
     relationship: 'An independent observation application. A shared Discovery notebook or backend has not been established.',
-    image: { file: 'orient.webp', alt: 'ORIENT observation interface in its no-location state', width: 1080, height: 2400, caption: 'Retained ORIENT screenshot; no-location state. Not a fresh physical-device acceptance test.' },
+    image: { file: 'orient.webp', alt: 'ORIENT observation interface in its no-location state', width: 1080, height: 2400, caption: 'ORIENT Android interface showing the no-location state.' },
   },
   {
     slug: 'local-ai-lab', name: 'Local AI Lab Installer', discipline: 'Automation · infrastructure', status: 'Implemented but unverified',
@@ -51,7 +51,7 @@ export const engineeringProjects: EngineeringProject[] = [
     evidence: ['Core tests cover workflows, frame rates, Xbox media handling and automation components.', 'Earlier test results were mixed, so this older revision is not presented as a fully passing release.'],
     limits: 'This is an earlier Clip Factory version. See the newer Clip Factory pipeline case study for additional export and upload evidence; this revision has incomplete verification.',
     relationship: 'A media pipeline internal to Clip Factory. No integration with Music Branch Resolver has been established.',
-    image: { file: 'clip-factory.webp', alt: 'Clip Factory mobile timeline editor with trim controls', width: 390, height: 844, caption: 'Retained mobile timeline test artifact. UI evidence, not proof of successful external publication.' },
+    image: { file: 'clip-factory.webp', alt: 'Clip Factory mobile timeline editor with trim controls', width: 390, height: 844, caption: 'Clip Factory mobile timeline and trim interface.' },
   },
   {
     slug: 'discovery-laboratory', name: 'OMNINATURAL / Discovery', discipline: 'Systems integration · experimental instruments', status: 'Experimental',
@@ -79,10 +79,10 @@ export const engineeringProjects: EngineeringProject[] = [
 ];
 
 export const supportingProjects = [
-  { name: 'Music Branch Resolver', status: 'Implemented but unverified', scope: 'React/Node archive reconciliation, DOCX provenance ingestion, search and matching workflows. Seven test files identified; no retained current pass or live publishing acceptance.' },
-  { name: 'Speech Android', status: 'Experimental', scope: 'React/Capacitor and Java audio bridge, articulation exploration, recording, reversible DSP, and JSON/WAV export. Historical 0.2.1 receipts: 141 Vitest, 7 Chromium, 17 Java codec, and 3 emulator instrumentation passes; no physical-device or speech-scoring validation.' },
-  { name: 'Icy Clearer', status: 'Experimental', scope: 'Separate Astro spatial-navigation interface with a typed project registry and mobile Moments. Related editorial/interface work, not the authoritative portfolio or a shared backend.' },
-  { name: 'Generative Reality', status: 'Experimental', scope: 'React/TypeScript interactive models, history exploration, and evidence ledger. Retained smoke captures do not establish model accuracy or Discovery integration.' },
-  { name: 'ICY FIELDWORK', status: 'Experimental', scope: 'FastAPI research instruments using audio, motion, reconstruction, layers, and provenance. Historical documentation records 34 passes; weak reconstruction results and missing real-sensor acceptance remain explicit.' },
-  { name: 'ICY Reality / Visual Lab', status: 'Experimental', scope: 'Geometry and signal-model sources reused by Discovery. Multiple Visual Lab variants remain distinct; broad scientific verification was not established.' },
+  { name: 'Music Branch Resolver', status: 'Implemented but unverified', scope: 'React/Node archive reconciliation, DOCX provenance ingestion, search and matching workflows. ' },
+  { name: 'Speech Android', status: 'Experimental', scope: 'React/Capacitor and Java audio bridge, articulation exploration, recording, reversible DSP, and JSON/WAV export. Native audio and DSP workflows tested in browser and emulator environments.' },
+  { name: 'Icy Clearer', status: 'Experimental', scope: 'Separate Astro spatial-navigation interface with a typed project registry and mobile Moments. A separate experiment in spatial website navigation and information design.' },
+  { name: 'Generative Reality', status: 'Experimental', scope: 'React/TypeScript interactive models, history exploration, and evidence ledger. ' },
+  { name: 'ICY FIELDWORK', status: 'Experimental', scope: 'FastAPI research instruments using audio, motion, reconstruction, layers, and provenance. ' },
+  { name: 'ICY Reality / Visual Lab', status: 'Experimental', scope: 'Geometry and signal-model sources reused by Discovery. ' },
 ];
