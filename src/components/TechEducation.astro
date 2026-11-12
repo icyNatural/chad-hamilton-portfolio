@@ -18,7 +18,7 @@ const sets = {
 const selected = sets[track ?? 'software'];
 ---
 <section class="tech-shell tech-section" aria-labelledby="academic-evidence-title">
-  <p class="tech-eyebrow">Education / verified academic evidence</p>
+  <p class="tech-eyebrow">Education / Collin College</p>
   <h2 id="academic-evidence-title">{detail ? 'Technical education & training' : 'Coursework that supports the engineering.'}</h2>
   <p class="tech-lead">Collin College · Information Systems Cybersecurity, networking and systems coursework. Dean's List in Fall 2024 and Spring 2025.</p>
   <div class="tech-grid tech-grid--two">
@@ -46,15 +46,15 @@ const selected = sets[track ?? 'software'];
         ))}
       </div>
       <aside class="tech-note">
-        <p><strong>Credential accuracy:</strong> This page summarizes documented coursework and academic honors; it does not publish a transcript or establish that a degree or college certificate was conferred.</p>
-        <p>Other previously documented achievements: Microsoft Azure Fundamentals and Microsoft 365 Fundamentals (2024). CompTIA A+ Core 1 (220-1101) was passed; this is <strong>not</strong> the complete A+ certification. Google Technical Support Fundamentals is course training.</p>
+        <p>Coursework and academic honors are listed separately from officially awarded degrees and certificates.</p>
+        <p>Credentials and training: Microsoft Azure Fundamentals and Microsoft 365 Fundamentals (2024); CompTIA A+ Core 1 (220-1101) exam passed; Google Technical Support Fundamentals coursework completed.</p>
       </aside>
     </>
   ) : (
     <article class="tech-card">
       <h3>{selected.title}</h3>
       <ul>{selected.courses.map(course => <li>{course}</li>)}</ul>
-      <p class="tech-muted">Grades and honors are documented by Collin College. College credential conferral has not been established by this academic record.</p>
+      <p class="tech-muted">Relevant coursework and Dean's List recognition documented in my academic record.</p>
       <div class="tech-linkrow"><a href="/education/">Review the academic evidence →</a></div>
     </article>
   )}

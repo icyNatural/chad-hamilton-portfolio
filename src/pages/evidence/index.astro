@@ -1,6 +1,42 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import {techProjects} from '../../data/tech-projects';
-const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
 ---
-<Layout title="Evidence & Project Ranking — ICY TECH" description="A fresh capability audit, ranked by engineering judgment and reproducible evidence rather than feature count."><section class="tech-shell tech-hero"><p class="tech-eyebrow">Selection method / November 10, 2026</p><h1>Show the work.<br />Qualify the claims.</h1><p class="tech-lead">A fresh capability audit of authoritative local versions, source boundaries and retained verification—not an endorsement of every feature or every earlier portfolio description.</p><p>Priorities: technical depth, meaningful original integration, completeness, reproducible evidence, employer relevance, distinctiveness, demonstration quality, maintainability/security, and public-safe presentation. Rankings are editorial judgments, not measurements. More features and more code earn no automatic credit.</p></section><section class="tech-shell tech-section"><h2>The ranked shortlist</h2><div class="tech-table-wrap"><table><caption>Current portfolio selection and rationale</caption><thead><tr><th scope="col">Rank / system</th><th scope="col">Why it earns its place</th><th scope="col">Version boundary</th></tr></thead><tbody>{techProjects.map(project=><tr><th scope="row">{project.rank}. <a href={`${base}projects/${project.slug}/`}>{project.name}</a></th><td>{project.why}</td><td>{project.version}</td></tr>)}</tbody></table></div></section><section class="tech-shell tech-section"><h2>How to read the evidence</h2><div class="tech-grid"><article class="tech-card"><h3>Freshly executed</h3><p>Visual Lab focused pure tests and syntax checks; Music Resolver’s five safe test files; selected service syntax checks. Exact scope appears in each case. This is not a fresh full-suite pass for every project.</p></article><article class="tech-card"><h3>Retained receipts</h3><p>Historical test output, upload records, model inference and browser checks retain their original date and scope. A documentation count is explicitly identified as reported, not silently elevated to raw proof.</p></article><article class="tech-card"><h3>Source-inspected</h3><p>Implementation exists in the inspected version. That alone does not mean it ran successfully, was deployed, is secure against every adversary, or works on a physical phone.</p></article></div><p class="tech-note">Portfolio build/browser checks test this website, not the runtime quality of the independent systems described by it. Accessibility basics are not WCAG certification. Mobile viewport emulation is not physical-device acceptance.</p></section><section class="tech-shell tech-section"><h2>What changed from the previous selection</h2><p>Current D: Visual Lab editions and Music Branch Resolver enter the professional foreground. Discovery Lab and Clip Factory move into the flagship set. Photogression is presented through its latest local Spatial Explorer, not assumed deployed functionality. ICY ALL is updated from the older 750-test account to the newer, qualified 849-test receipt.</p><p>Older physiology, language and semantic experiments remain reachable as archival cases, but no longer define the homepage. CERT, Inspector and WEATHERFUL are not the leading proof for this launch: current orchestration, privacy boundaries, creative tooling and media pipelines provide stronger engineering evidence. This does not invalidate those earlier projects or alter the audited resumes.</p><h3>Other candidates considered</h3><p>Speech Android, Movement Lab, ThreeJS Lab, ICY Reality, Local AI Lab Installer, Discovery Convergence and Interface Atlas were considered alongside the shortlist. Alternate versions and precursor projects are not counted as independent achievements just to enlarge the ecosystem. Some need stronger current execution receipts, safer demonstrations or clearer standalone portability before flagship placement.</p><p>No authoritative project named THE ONE STUDIO or a separate newer Clip Uploader was established in the bounded workspace discovery. That is a discovery limitation, not a claim they do not exist.</p><h3>Public disclosure boundary</h3><p>No private repositories were made public. Source modules are referenced by relative filename; no private control endpoints, local paths, credentials, personal catalogs or private investigation data are exported. Screenshots are published only after explicit content review. Public explanatory interactions are labeled as newly written models, not passed off as original live systems.</p></section></Layout>
+<Layout title="How I Build & Verify Projects — ICY TECH" description="A practical look at design decisions, testing, deployment and the evidence behind my independent engineering projects.">
+  <section class="tech-shell tech-hero">
+    <p class="tech-eyebrow">Engineering practice</p>
+    <h1>Build it.<br /><em>Test it.</em><br />Make it useful.</h1>
+    <p class="tech-lead">My projects combine application development, AI integration, creative interfaces and local infrastructure. I focus on systems people can understand, test and improve—not just prototypes that look finished.</p>
+  </section>
+  <section class="tech-shell tech-section">
+    <h2>How I approach engineering</h2>
+    <div class="tech-grid">
+      <article class="tech-card">
+        <h3>Start with the problem</h3>
+        <p>Define the workflow, the user's decisions and the data that must survive. Then choose tools suited to the work—whether that's a web interface, a Python API or a local service.</p>
+      </article>
+      <article class="tech-card">
+        <h3>Test real behavior</h3>
+        <p>Use automated tests, browser checks, reproducible inputs and direct inspection. Different kinds of testing answer different questions, so each project records what was actually exercised.</p>
+      </article>
+      <article class="tech-card">
+        <h3>Build for changes and failures</h3>
+        <p>Separate original data from derived results, make important actions recoverable and keep permissions explicit. A system should remain understandable when something goes wrong.</p>
+      </article>
+    </div>
+  </section>
+  <section class="tech-shell tech-section">
+    <h2>Explore the implementations</h2>
+    <p class="tech-lead">These are starting points for seeing the architecture, code-level choices and demonstrations behind the work.</p>
+    <div class="tech-grid">
+      {techProjects.slice(0,6).map(project => <article class="tech-card">
+        <p class="tech-eyebrow">{project.category}</p>
+        <h3><a href={base + 'projects/' + project.slug + '/'}>{project.name}</a></h3>
+        <p>{project.summary}</p>
+        <div class="tech-linkrow"><a href={base + 'projects/' + project.slug + '/'}>View project →</a></div>
+      </article>)}
+    </div>
+    <p class="tech-linkrow"><a class="tech-button" href={base + 'projects/'}>Explore all projects →</a><a href="https://github.com/icyNatural" target="_blank" rel="noopener noreferrer">GitHub profile ↗</a></p>
+  </section>
+</Layout>
