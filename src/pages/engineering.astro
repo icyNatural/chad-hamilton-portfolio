@@ -1,16 +1,46 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { engineeringProjects, supportingProjects } from '../data/engineering-projects';
-const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
 ---
-<Layout title="Engineering index — Chad Hamilton" description="Evidence, implementation boundaries, and relationships across independent software, AI, automation, and infrastructure projects.">
-  <header class="section-pad"><div class="shell"><a class="back-link" href={`${base}#work`}>← Selected work</a><p class="eyebrow">Engineering / October 2026</p><h1>What connects. What works. What remains open.</h1><p class="hero__lede">Independent projects spanning software, AI systems, automation, infrastructure and security.</p></div></header>
-  <section class="section-pad-sm section-rule"><div class="shell prose"><h2>Read the evidence, not just the label.</h2><p><strong>Verified:</strong> identified execution or test evidence for a stated scope. <strong>Implemented but unverified:</strong> source exists without sufficient current acceptance. <strong>Experimental:</strong> exploratory systems, even where individual tests pass. <strong>Planned:</strong> not implemented and never counted as a delivered capability.</p><p>Explore each project for implementation details and testing scope.</p></div></section>
-  <section class="section-pad section-rule"><div class="shell"><p class="eyebrow">Find engineering evidence</p><h2>Choose a technical direction.</h2><div class="engineering-grid">
-    <article class="engineering-card"><h3>AI & retrieval</h3><p><a href={`${base}projects/inquiry-engine/`}>Inquiry Engine</a>: retrieval policy, source traces, model processing, and saved investigations.</p></article>
-    {engineeringProjects.map(p => <article class="engineering-card"><p class="eyebrow">{p.discipline}</p><h3><a href={`${base}projects/${p.slug}/`}>{p.name}</a></h3><p>{p.summary}</p><p><strong>{p.status}</strong></p></article>)}
-    <article class="engineering-card"><h3>Data & cross-platform integration</h3><p><a href={`${base}projects/energy-engine/`}>Energy Engine</a>: read-only health bridge, normalization, provenance, and clear model limitations.</p></article>
-  </div></div></section>
-  <section class="section-pad section-dark"><div class="shell"><p class="eyebrow">Ecosystem relationships</p><h2>Connections with evidence, not implied integrations.</h2><ul class="project-action-list"><li>ICY Reality geometry + Visual Lab signal code → Discovery instruments: direct source reuse.</li><li>Discovery → Luxar: documented bounded native-tool exchange. Upstream tools retain their authorship.</li><li>Health Connect → Kotlin bridge → Energy adapters and state: implemented read-only data boundary.</li><li>Inquiry retrieval → reasoning → SQLite record: historically exercised connected workflow.</li><li>Local AI Lab and Inquiry share infrastructure concerns, not a verified automatic deployment pipeline.</li><li>ORIENT, Generative Reality, and Music Branch Resolver are independent; no shared observation store or media pipeline is implied.</li></ul></div></section>
-  <section class="section-pad"><div class="shell"><p class="eyebrow">Supporting investigations</p><h2>More work, with its boundaries intact.</h2><div class="engineering-grid">{supportingProjects.map(p => <article class="engineering-card"><h3>{p.name}</h3><p><strong>{p.status}</strong></p><p>{p.scope}</p></article>)}</div></div></section>
+<Layout title="More Engineering Projects — ICY TECH" description="Additional software, AI, Android and systems projects from Chad Hamilton.">
+  <section class="tech-shell tech-hero">
+    <p class="tech-eyebrow">More projects</p>
+    <h1>Keep exploring.</h1>
+    <p class="tech-lead">Additional engineering projects covering Android applications, automation, data interfaces, simulations and experimental tools.</p>
+    <div class="tech-linkrow"><a class="tech-button" href={base + 'projects/'}>Featured projects →</a><a href={base + 'software/'}>Software / AI →</a><a href={base + 'systems/'}>Systems / IT →</a></div>
+  </section>
+  <section class="tech-shell tech-section">
+    <h2>Engineering projects</h2>
+    <div class="tech-grid">
+      {engineeringProjects.map(project => (
+        <article class="tech-card">
+          <p class="tech-eyebrow">{project.discipline}</p>
+          <h3><a href={base + 'projects/' + project.slug + '/'}>{project.name}</a></h3>
+          <p>{project.summary}</p>
+          <div class="tech-linkrow"><a href={base + 'projects/' + project.slug + '/'}>Explore project →</a></div>
+        </article>
+      ))}
+      <article class="tech-card">
+        <p class="tech-eyebrow">Information retrieval</p>
+        <h3><a href={base + 'projects/inquiry-engine/'}>Inquiry Engine</a></h3>
+        <p>Local retrieval, source references, model-assisted investigation and saved research records.</p>
+        <div class="tech-linkrow"><a href={base + 'projects/inquiry-engine/'}>Explore project →</a></div>
+      </article>
+      <article class="tech-card">
+        <p class="tech-eyebrow">Cross-platform data</p>
+        <h3><a href={base + 'projects/energy-engine/'}>Energy Engine</a></h3>
+        <p>Read-only data integration, normalization and interactive information displays.</p>
+        <div class="tech-linkrow"><a href={base + 'projects/energy-engine/'}>Explore project →</a></div>
+      </article>
+    </div>
+  </section>
+  <section class="tech-shell tech-section">
+    <h2>Other experiments</h2>
+    <div class="tech-grid">
+      {supportingProjects.map(project => (
+        <article class="tech-card"><h3>{project.name}</h3><p>{project.scope}</p></article>
+      ))}
+    </div>
+  </section>
 </Layout>
