@@ -45,8 +45,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
     {project.slug === 'visual-lab' && <ConstructionStudy />}
     {project.slug === 'music-archive' && <ReviewStudy />}
     <details class="tech-note" style="margin-top:2rem">
-      <summary>Testing, version information & current limitations</summary>
-      <p><strong>Version examined:</strong> {project.version}</p>
+      <summary>Testing & current limitations</summary>
+      
       <h3>Testing and supporting evidence</h3>
       <ul>{project.evidence.map(item => <li>{item}</li>)}</ul>
       <h3>Current limitations</h3>
