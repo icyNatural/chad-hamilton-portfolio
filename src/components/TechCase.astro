@@ -21,12 +21,22 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
     {project.live && <p><a class="tech-button" href={project.live} target="_blank" rel="noopener noreferrer">Open live application ↗</a></p>}
   </section>
   {demo && <section class="tech-shell tech-section" id="demo" aria-labelledby="demo-heading"><p class="tech-eyebrow">Recorded in the original application</p><h2 id="demo-heading">Watch {demo.name} in action.</h2><ProjectVideo demo={demo} /></section>}
-  {project.image && !demo && (
+  {project.image && (
     <section class="tech-shell tech-section">
-      <figure>
-        <img src={base + project.image} width="1000" height="650" style="display:block;width:auto;max-width:100%;max-height:720px;height:auto;object-fit:contain" alt={project.imageCaption} loading="lazy"/>
-        <figcaption class="tech-muted">{project.imageCaption}</figcaption>
-      </figure>
+      {demo ? (
+        <details class="tech-note">
+          <summary>Additional project image</summary>
+          <figure style="margin:1rem 0 0">
+            <img src={base + project.image} width="1000" height="650" style="display:block;width:auto;max-width:100%;max-height:720px;height:auto;object-fit:contain" alt={project.imageCaption} loading="lazy"/>
+            <figcaption class="tech-muted">{project.imageCaption}</figcaption>
+          </figure>
+        </details>
+      ) : (
+        <figure>
+          <img src={base + project.image} width="1000" height="650" style="display:block;width:auto;max-width:100%;max-height:720px;height:auto;object-fit:contain" alt={project.imageCaption} loading="lazy"/>
+          <figcaption class="tech-muted">{project.imageCaption}</figcaption>
+        </figure>
+      )}
     </section>
   )}
   <section class="tech-shell tech-section">
