@@ -5,11 +5,12 @@ interface Props { project: TechProject }
 const {project} = Astro.props;
 const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
 ---
-<article class="tech-card">
+<article class="tech-card tech-card--project">
   <div class="tech-eyebrow">{String(project.rank).padStart(2,'0')} / {project.category}</div>
-  {project.image && <figure><img src={`${base}${project.image}`} alt={project.imageCaption} loading="lazy" width="1000" height="650" style="width:100%;height:200px;object-fit:cover;object-position:top"/><figcaption class="tech-muted">{project.slug === 'visual-lab' ? 'ICY Visual Lab — Marble Terrain scene' : 'Clip Factory — editing and export workspace'}</figcaption></figure>}
+  {(project.image || getDemo(project.slug)) && <figure><img src={project.image ? `${base}${project.image}` : `${base}media/demos/${getDemo(project.slug)!.poster}`} alt={project.imageCaption || `${project.name} — recorded application interface`} loading="lazy" width="1000" height="650" style="width:100%;height:200px;object-fit:cover;object-position:top"/><figcaption class="tech-muted">{getDemo(project.slug) ? 'Recorded workflow available' : 'Application interface'}</figcaption></figure>}
   <h3><a href={`${base}projects/${project.slug}/`}>{project.name}</a></h3><p>{project.summary}</p>
   <ul class="tech-tags" aria-label="Technologies">{project.stack.slice(0,5).map(item => <li>{item}</li>)}</ul>
-  <p class="tech-status">{project.live ? 'Public app available · latest local features described in case study' : 'Technical case study · local project'}</p><a href={`${base}projects/${project.slug}/`}>View project case study →</a>
-  {getDemo(project.slug) && <p><a href={`${base}projects/${project.slug}/#demo`}>Watch demo →</a></p>}
+  <p class="tech-status">{project.live ? 'Public app · see version limits' : 'Local application · documented implementation'}</p>
+  <div class="tech-card__links"><a href={`${base}projects/${project.slug}/`}>Case study →</a>
+  {getDemo(project.slug) && <a href={`${base}projects/${project.slug}/#demo`}>Watch demo ↗</a>}</div>
 </article>

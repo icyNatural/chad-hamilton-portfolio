@@ -182,9 +182,26 @@ export const techProjects: TechProject[] = [
   },
 ];
 
+// Public standalone deployment, intentionally distinct from the local generation server.
+techProjects.push({
+  slug: 'cert-engine', name: 'ICY CERT ENGINE', category: 'Security learning / offline interface', rank: 13,
+  summary: 'A standalone Security+ SY0-701 study interface with 519 original question-and-answer records, explanations, search, objective filters, bookmarks and review self-ratings.',
+  why: 'Makes a substantial study deck searchable and usable without an account, runtime backend or framework. A saved HTML copy remains usable offline.',
+  version: 'Public standalone deployment inspected November 19, 2026 · content hash c8a33211',
+  stack: ['HTML', 'CSS', 'JavaScript', 'Embedded JSON', 'localStorage'], tracks: ['software', 'security'],
+  problem: 'Turn a large certification study bank into a focused recall interface that remains portable and keeps progress under the learner’s control.',
+  decisions: ['Embed records, styles and application logic in one portable HTML document; no backend is required for study.', 'Keep bookmarks and fixed-interval review self-ratings in browser-local storage, with explicit progress backup controls.', 'Separate original practice material from official exam items and independently verified answers.'],
+  flow: ['519 embedded study records', 'Search / objective filters / recall', 'Browser-local bookmarks + review state'],
+  evidence: ['Public deployment and local standalone source matched byte-for-byte during inspection. The bank has 519 unique IDs and nonempty question, answer and explanation fields across 28 numbered objectives.', 'Browser checks exercised search, objective filters, answer reveal, bookmarks across reload, four review ratings, full-bank export and a saved HTML copy opened offline. Mobile emulation at 390px showed no document overflow.'],
+  limitations: ['Record structure and feature behavior were checked; all 519 answers were not independently fact-checked. Original practice material is not an official or endorsed CompTIA product.', 'Offline operation was verified for an already-loaded page and a saved HTML copy, not hosted offline reload or an installable PWA. Progress is device/origin-specific; no automatic cross-device synchronization is demonstrated.'],
+  demonstration: 'Open the public standalone study deck. Search an objective, reveal an answer, bookmark a record or use the self-ratings to schedule a review. The screenshot below shows a fresh session without personal progress.',
+  source: ['index.html — embedded record bank, interface and browser storage'], related: ['control', 'interface-atlas', 'inquiry'],
+  live: 'https://cert.icyclearer.com/', image: 'images/tech/cert-engine-study.jpg', imageCaption: 'ICY CERT ENGINE — public standalone Security+ study deck in a fresh browser session.',
+});
+
 export const trackInfo = {
   software: {title: 'Software / AI / Automation', short: 'Software', intro: 'Applications, AI integration and creative tools that remain editable, recoverable and inspectable.', resume: 'Chad_Hamilton_software_ai_AUDITED.pdf', focus: ['Complex interfaces and local-first persistence', 'Model integration with explicit evidence boundaries', 'Media automation, testing and deployment'], projects: ['visual-lab', 'photogression-spatial', 'clip-pipeline', 'music-archive', 'discovery-lab', 'inquiry']},
-  security: {title: 'Security Engineering', short: 'Security', intro: 'Security-conscious application and systems work: trust boundaries, restricted operations, provenance and validation. Independent engineering, not a claim of paid SOC experience.', resume: 'Chad_Hamilton_cybersecurity_AUDITED.pdf', focus: ['Pairing, CSRF and process ownership', 'Privacy projections and validated inputs', 'Recovery, provenance and qualified security claims'], projects: ['control', 'fabric', 'inquiry', 'discovery-lab', 'clip-pipeline']},
+  security: {title: 'Security Engineering', short: 'Security', intro: 'I apply cybersecurity coursework to application trust boundaries, restricted operations and security automation. These are independent projects, supported by field IT experience—not a claim of paid SOC or production security-engineering experience.', resume: 'Chad_Hamilton_cybersecurity_AUDITED.pdf', focus: ['Pairing, CSRF and process ownership', 'Privacy projections and validated inputs', 'Recovery, provenance and qualified security claims'], projects: ['control', 'fabric', 'cert-engine', 'inquiry', 'discovery-lab', 'clip-pipeline']},
   systems: {title: 'Systems / Infrastructure / IT', short: 'Systems', intro: 'Local service orchestration, diagnostics, Windows/Linux integration and recoverable workflows—with operational limits made visible.', resume: 'Chad_Hamilton_systems_it_AUDITED.pdf', focus: ['Lifecycle control and Windows process identity', 'SQLite recovery and bounded workers', 'Local AI, media pipelines and deployment operations'], projects: ['control', 'fabric', 'discovery-lab', 'visual-lab', 'clip-pipeline']},
 } as const;
 

@@ -17,8 +17,8 @@ const sets = {
 };
 const selected = sets[track ?? 'software'];
 ---
-<section class="tech-shell tech-section" aria-labelledby="academic-evidence-title">
-  <p class="tech-eyebrow">Education / Collin College</p>
+<section class="tech-shell tech-section tech-section--study" aria-labelledby="academic-evidence-title">
+  <p class="tech-eyebrow"><span class="tech-section-number">{detail ? '01 /' : track ? '02 /' : '03 /'}</span> Education / Collin College</p>
   <h2 id="academic-evidence-title">{detail ? 'Technical education & training' : 'Coursework that supports the engineering.'}</h2>
   <p class="tech-lead">Collin College · Information Systems Cybersecurity, networking and systems coursework. Dean's List in Fall 2024 and Spring 2025.</p>
   <div class="tech-grid tech-grid--two">
