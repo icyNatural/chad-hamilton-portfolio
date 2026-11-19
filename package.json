@@ -10,7 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "node --test scripts/tech-catalog.test.mjs scripts/project-demos.test.mjs",
+    "test": "node --test scripts/tech-catalog.test.mjs scripts/project-demos.test.mjs scripts/portfolio-refinement.test.mjs",
     "test:demos": "node scripts/verify-demos.mjs"
   },
   "dependencies": {

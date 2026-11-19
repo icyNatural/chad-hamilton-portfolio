@@ -5,24 +5,26 @@ import ProjectCard from '../components/TechProjectCard.astro';
 import Ecosystem from '../components/TechEcosystem.astro';
 import TechEducation from '../components/TechEducation.astro';
 import DemoShowcase from '../components/DemoShowcase.astro';
+import CertProject from '../components/CertProject.astro';
 const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
 ---
-<Layout title="ICY TECH — Chad Hamilton / Interconnected Technical Systems" description="Independent software engineering, AI integrations, creative tools and infrastructure projects, with project demos and technical case studies.">
-  <section class="tech-shell tech-hero" id="work">
+<Layout title="ICY TECH — Chad Hamilton / Software, AI & Systems" description="I develop interactive applications, AI workflows and technical infrastructure. Explore recorded demonstrations, implementation decisions and deployed projects.">
+  <section class="tech-shell tech-hero tech-home-hero" id="work">
     <p class="tech-eyebrow">Chad Hamilton · Independent engineering · Dallas–Fort Worth</p>
-    <h1>I build real,<br /><em>interconnected</em><br />technical systems.</h1>
-    <p class="tech-lead">From interactive 3D environments and computer-vision applications to media automation and local infrastructure. I build the interfaces, integrations, and systems that make them work.</p>
+    <h1>Software, systems,<br />{' '}and ideas <em>made functional.</em></h1>
+    <p class="tech-lead">I develop interactive applications, AI workflows, and technical infrastructure—from the interface people see to the systems operating beneath it.</p>
     <div class="tech-linkrow"><a class="tech-button" href={`${base}projects/`}>Explore the work ↗</a><a href={`${base}software/`}>Software / AI</a><a href={`${base}security/`}>Security</a><a href={`${base}systems/`}>Systems / IT</a></div>
-    <div class="tech-metrics"><div><strong>Build</strong><span>Applications → services → instruments</span></div><div><strong>Connect</strong><span>Media, models, data and workflows</span></div><div><strong>Verify</strong><span>Testing, reliability and measurable results</span></div></div>
+    <div class="tech-metrics tech-process" aria-label="My engineering process"><div><span class="tech-process__number" aria-hidden="true">01 /</span><strong>Build</strong><span>Applications, interfaces, and interactive environments.</span></div><div><span class="tech-process__number" aria-hidden="true">02 /</span><strong>Connect</strong><span>Models, services, data, and automation.</span></div><div><span class="tech-process__number" aria-hidden="true">03 /</span><strong>Verify</strong><span>Working deployments, tests, and measurable behavior.</span></div></div>
   </section>
   <DemoShowcase />
-  <section class="tech-section tech-shell" aria-labelledby="flagship-heading">
-    <p class="tech-eyebrow">Featured projects / Software · AI · Infrastructure</p><h2 id="flagship-heading">Explore what I've built.</h2>
-    <p class="tech-lead">Interactive visual tools, computer vision, automation pipelines, and systems engineering. Select a project to see the architecture, technologies, implementation details, and what you can try.</p>
+  <section class="tech-section tech-shell tech-section--work" aria-labelledby="flagship-heading">
+    <p class="tech-eyebrow"><span class="tech-section-number">02 /</span> Selected engineering</p><h2 id="flagship-heading">The interface.<br />The system behind it.</h2>
+    <p class="tech-lead">Editable scenes, image-derived depth, media pipelines and local service control. Each case connects what you can see to the implementation decisions beneath it.</p>
     <div class="tech-grid">{techProjects.slice(0,6).map(project => <ProjectCard project={project} />)}</div>
     <p class="tech-linkrow"><a href={`${base}projects/`}>Explore all {techProjects.length} projects →</a><a href={`${base}software/`}>See Software / AI work →</a></p>
   </section>
   <TechEducation />
-  <section class="tech-section tech-shell"><Ecosystem /></section>
-  <section class="tech-section tech-shell" id="about"><p class="tech-eyebrow">The person behind the systems</p><h2>Technical depth.<br />An experimental point of view.</h2><p class="tech-lead">I’m Chad Hamilton. I build web applications, creative tools, AI integrations, and local systems, often connecting technologies that are usually explored separately.</p><p>My background includes field IT support, hands-on systems troubleshooting, and technical coursework in cybersecurity and computer networking at Collin College. Browse the projects for implementation decisions, tests, demos, and documented limitations.</p><div class="tech-linkrow"><a class="tech-button" href="mailto:Justchadham@gmail.com">Let’s talk</a><a href="https://github.com/icyNatural">Public GitHub profile ↗</a><a href="https://icyclearer.com">Creative practice ↗</a></div></section>
+  <CertProject />
+  <section class="tech-section tech-shell"><Ecosystem number="04" /></section>
+  <section class="tech-section tech-shell tech-section--quiet" id="about"><p class="tech-eyebrow"><span class="tech-section-number">05 /</span> The person behind the systems</p><h2>Independent work.<br />Practical technical range.</h2><p class="tech-lead">I’m Chad Hamilton. I build web applications, creative tools, AI integrations, and local systems, often connecting technologies that are usually explored separately.</p><p>My strongest project experience is in application development, AI integration and automation. My infrastructure work and cybersecurity coursework support that practice; I’m building toward junior engineering and systems roles, not claiming equal depth in every specialty.</p><p>My background includes field IT support, hands-on systems troubleshooting, and technical coursework in cybersecurity and computer networking at Collin College. Browse the projects for implementation decisions, tests, demos, and documented limitations.</p><div class="tech-linkrow"><a class="tech-button" href="mailto:Justchadham@gmail.com">Let’s talk</a><a href="https://github.com/icyNatural">Public GitHub profile ↗</a><a href="https://icyclearer.com">Creative practice ↗</a></div></section>
 </Layout>
