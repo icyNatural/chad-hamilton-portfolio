@@ -1,0 +1,37 @@
+---
+import type { ProjectDemo } from '../data/project-demos';
+interface Props { demo: ProjectDemo; }
+const { demo } = Astro.props;
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+---
+<figure class="project-video">
+  <video controls playsinline preload="none" width="1920" height="1080"
+    poster={`${base}media/demos/${demo.poster}`} aria-label={`${demo.name} — recorded application demonstration`}
+    aria-describedby={`video-description-${demo.slug}`}>
+    <source src={`${base}media/demos/${demo.file}`} type="video/mp4" />
+    <track kind="captions" src={`${base}media/demos/${demo.captions}`} srclang="en" label="English — action descriptions" default />
+    Your browser does not support embedded video. <a href={`${base}media/demos/${demo.file}`}>Download the demonstration</a>.
+  </video>
+  <figcaption id={`video-description-${demo.slug}`}>
+    <strong>{demo.name}</strong> · {demo.description} Silent recording; action captions available in the player.
+  </figcaption>
+</figure>
+<details class="project-video__transcript"><summary>Demonstrated actions &amp; recording limits</summary>
+  <ol>{demo.actions.map(action => <li>{action}</li>)}</ol>
+  <p>{demo.limitation}</p><p class="tech-muted">Recorded version: {demo.version}</p>
+</details>
+<script>
+  // Keep playback visitor-initiated and stop other recordings when one starts.
+  document.addEventListener('play', event => {
+    if (!(event.target instanceof HTMLVideoElement)) return;
+    const active = event.target;
+    document.querySelectorAll('video').forEach(video => { if (video !== active) video.pause(); });
+  }, true);
+</script>
+<style>
+  .project-video { margin: 1.5rem 0 0; }
+  video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; background: #111b20; border: 1px solid var(--tech-line); }
+  figcaption { margin-top: .75rem; color: var(--tech-muted); font-size: .9rem; }
+  .project-video__transcript { margin-top: 1rem; }
+  summary { cursor: pointer; font-weight: 600; }
+</style>

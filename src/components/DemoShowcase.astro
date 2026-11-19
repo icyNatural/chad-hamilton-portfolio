@@ -1,0 +1,20 @@
+---
+import ProjectVideo from './ProjectVideo.astro';
+import { projectDemos } from '../data/project-demos';
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+const reel = {
+  slug: 'highlights', name: 'ICY TECH — project highlights',
+  file: 'project-highlights.mp4', poster: 'project-highlights.jpg', captions: 'project-highlights.vtt',
+  description: 'A short selection of real operations in ICY Visual Lab, Photogression and Clip Factory.',
+  actions: ['Create and edit a scene in ICY Visual Lab.', 'Explore an image-derived spatial representation in Photogression.', 'Edit and export demonstration footage in Clip Factory.'],
+  limitation: 'Edited excerpts from desktop application recordings. The full demonstrations below describe exactly what was exercised and what remains unverified.',
+  version: 'November 19, 2026 · versions listed with each full demonstration',
+};
+---
+{projectDemos.length > 0 && <section class="tech-section tech-shell" id="demonstrations" aria-labelledby="demonstrations-heading">
+  <p class="tech-eyebrow">Real applications / recorded workflows</p>
+  <h2 id="demonstrations-heading">See the software work.</h2>
+  <p class="tech-lead">Scene editing, image processing and media export—recorded in the original applications. Start with the short reel, then explore the full workflows.</p>
+  <ProjectVideo demo={reel} />
+  <div class="tech-linkrow" style="margin-top:1.5rem">{projectDemos.map(demo => <a href={`${base}projects/${demo.slug}/#demo`}>Watch {demo.name} →</a>)}</div>
+</section>}

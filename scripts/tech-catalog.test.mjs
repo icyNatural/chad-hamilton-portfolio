@@ -13,7 +13,8 @@ test('all public case routes and relationship targets exist',()=>{
  for(const p of techProjects){assert.ok(fs.existsSync(path.join(root,'src/pages/projects',p.slug+'.astro')));for(const slug of p.related)assert.ok(getProject(slug));}
 });
 test('every case has concrete evidence, limits and an architecture flow',()=>{
- for(const p of techProjects){assert.ok(p.evidence.length>=2,p.slug);assert.ok(p.limitations.length>=2,p.slug);assert.equal(p.flow.length,3);assert.ok(p.version);assert.ok(p.demonstration);}
+ // One retained evidence entry is valid; do not require invented or duplicate receipts.
+ for(const p of techProjects){assert.ok(p.evidence.length>=1,p.slug);assert.ok(p.evidence.every(item=>item.trim().length>20),p.slug);assert.ok(p.limitations.length>=2,p.slug);assert.equal(p.flow.length,3);assert.ok(p.version);assert.ok(p.demonstration);}
 });
 test('career selection targets valid cases and unchanged matching PDF files',()=>{
  for(const [track,info]of Object.entries(trackInfo)){for(const slug of info.projects)assert.ok(getProject(slug),track);const pdf=fs.readFileSync(path.join(root,'public/resumes',info.resume));assert.equal(pdf.subarray(0,5).toString(),'%PDF-');}

@@ -4,6 +4,7 @@ import {techProjects} from '../data/tech-projects';
 import ProjectCard from '../components/TechProjectCard.astro';
 import Ecosystem from '../components/TechEcosystem.astro';
 import TechEducation from '../components/TechEducation.astro';
+import DemoShowcase from '../components/DemoShowcase.astro';
 const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
 ---
 <Layout title="ICY TECH — Chad Hamilton / Interconnected Technical Systems" description="Independent software engineering, AI integrations, creative tools and infrastructure projects, with project demos and technical case studies.">
@@ -14,6 +15,7 @@ const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
     <div class="tech-linkrow"><a class="tech-button" href={`${base}projects/`}>Explore the work ↗</a><a href={`${base}software/`}>Software / AI</a><a href={`${base}security/`}>Security</a><a href={`${base}systems/`}>Systems / IT</a></div>
     <div class="tech-metrics"><div><strong>Build</strong><span>Applications → services → instruments</span></div><div><strong>Connect</strong><span>Media, models, data and workflows</span></div><div><strong>Verify</strong><span>Testing, reliability and measurable results</span></div></div>
   </section>
+  <DemoShowcase />
   <section class="tech-section tech-shell" aria-labelledby="flagship-heading">
     <p class="tech-eyebrow">Featured projects / Software · AI · Infrastructure</p><h2 id="flagship-heading">Explore what I've built.</h2>
     <p class="tech-lead">Interactive visual tools, computer vision, automation pipelines, and systems engineering. Select a project to see the architecture, technologies, implementation details, and what you can try.</p>

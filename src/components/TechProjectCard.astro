@@ -1,5 +1,6 @@
 ---
 import type {TechProject} from '../data/tech-projects';
+import { getDemo } from '../data/project-demos';
 interface Props { project: TechProject }
 const {project} = Astro.props;
 const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
@@ -10,4 +11,5 @@ const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
   <h3><a href={`${base}projects/${project.slug}/`}>{project.name}</a></h3><p>{project.summary}</p>
   <ul class="tech-tags" aria-label="Technologies">{project.stack.slice(0,5).map(item => <li>{item}</li>)}</ul>
   <p class="tech-status">{project.live ? 'Public app available · latest local features described in case study' : 'Technical case study · local project'}</p><a href={`${base}projects/${project.slug}/`}>View project case study →</a>
+  {getDemo(project.slug) && <p><a href={`${base}projects/${project.slug}/#demo`}>Watch demo →</a></p>}
 </article>

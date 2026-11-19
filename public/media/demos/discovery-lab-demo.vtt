@@ -1,0 +1,22 @@
+WEBVTT
+
+00:00.000 --> 00:07.000
+Discovery Lab: a simulated terrain-and-marble experiment, not a physical recording.
+
+00:06.800 --> 00:12.354
+Change gravity from 9.81 to 3.71 m/s², then sculpt the valley.
+
+00:12.354 --> 00:17.381
+Drop another marble into the hand-sculpted starting scene.
+
+00:17.381 --> 00:27.583
+Run the model: trajectories and live kinetic, potential and lost energy.
+
+00:27.583 --> 00:34.189
+Inspect the computed run from the same starting state.
+
+00:34.189 --> 00:40.635
+Record an independent server calculation, then replay its result hash.
+
+00:40.635 --> 00:46.400
+Save the investigation and export its evidence bundle.
