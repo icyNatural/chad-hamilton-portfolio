@@ -9,7 +9,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "node --test scripts/tech-catalog.test.mjs scripts/project-demos.test.mjs",
+    "test:demos": "node scripts/verify-demos.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.5",

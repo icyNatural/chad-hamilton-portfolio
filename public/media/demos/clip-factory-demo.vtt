@@ -1,0 +1,23 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:05.300
+Import a safe, generated video into the local media queue.
+
+00:00:05.300 --> 00:00:13.700
+Add on-media text and preview the vertical composition.
+
+00:00:13.700 --> 00:00:18.000
+Trim the eight-second source to the range 1–6 seconds.
+
+00:00:18.000 --> 00:00:22.000
+Prepare a title, description, hashtags, and tags.
+
+00:00:22.000 --> 00:00:26.000
+Export the five-second composition locally as an MP4.
+
+00:00:26.000 --> 00:00:36.833
+Export complete. The queue retains the edited item and metadata.
+No external publishing is performed.
+
+00:00:36.833 --> 00:00:41.833
+Actual downloaded local export: five seconds of the finished composition.

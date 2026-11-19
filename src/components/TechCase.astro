@@ -3,8 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import { getProject } from '../data/tech-projects';
 import ConstructionStudy from './TechConstructionStudy.astro';
 import ReviewStudy from './TechReviewStudy.astro';
+import ProjectVideo from './ProjectVideo.astro';
+import { getDemo } from '../data/project-demos';
 interface Props { slug: string; }
 const project = getProject(Astro.props.slug);
+const demo = getDemo(project.slug);
 const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
 ---
 <Layout title={project.name + ' — Engineering Case Study / ICY TECH'} description={project.summary}>
@@ -17,7 +20,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
     <p class="tech-status">{project.live ? 'Public application available' : 'Locally developed application · technical case study'}</p>
     {project.live && <p><a class="tech-button" href={project.live} target="_blank" rel="noopener noreferrer">Open live application ↗</a></p>}
   </section>
-  {project.image && (
+  {demo && <section class="tech-shell tech-section" id="demo" aria-labelledby="demo-heading"><p class="tech-eyebrow">Recorded in the original application</p><h2 id="demo-heading">Watch {demo.name} in action.</h2><ProjectVideo demo={demo} /></section>}
+  {project.image && !demo && (
     <section class="tech-shell tech-section">
       <figure>
         <img src={base + project.image} width="1000" height="650" style="display:block;width:auto;max-width:100%;max-height:720px;height:auto;object-fit:contain" alt={project.imageCaption} loading="lazy"/>
@@ -39,7 +43,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
   </section>
   <section class="tech-shell tech-section">
     <h2>Explore the project</h2>
-    <p class="tech-lead">{project.demonstration}</p>
+    <p class="tech-lead">{demo ? 'The recording above shows the locally running application. Its demonstrated actions, recorded version and limitations are listed beside the player. The technical material below offers further context.' : project.demonstration}</p>
     {project.live && <p><a class="tech-button" href={project.live} target="_blank" rel="noopener noreferrer">Try the public application ↗</a></p>}
     {project.repository && <p><a href={project.repository} target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a></p>}
     {project.slug === 'visual-lab' && <ConstructionStudy />}
