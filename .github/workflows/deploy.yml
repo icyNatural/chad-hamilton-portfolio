@@ -3,6 +3,8 @@ name: Deploy Astro site to GitHub Pages
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -30,15 +32,31 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install PDF build dependencies
+        run: python3 -m pip install --disable-pip-version-check reportlab pypdf
+
+      - name: Generate and verify five résumé PDFs
+        run: python3 scripts/build_resumes.py
+
+      - name: Install media probe for existing demo tests
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+
+      - name: Test Astro content
+        run: npm test
+
       - name: Build
         run: npm run build
 
       - name: Upload artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
   deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
