@@ -38,6 +38,11 @@ jobs:
       - name: Generate and verify five résumé PDFs
         run: python3 scripts/build_resumes.py
 
+      - name: Install media probe for existing demo tests
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+
       - name: Test Astro content
         run: npm test
 
