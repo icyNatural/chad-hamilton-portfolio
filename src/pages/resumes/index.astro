@@ -1,0 +1,38 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import profiles from '../../data/resume-profiles.json';
+---
+<Layout title="Role-focused résumés — ICY TECH / Chad Hamilton" description="Five concise, downloadable résumé tracks: software, AI automation, cybersecurity, IT systems, and creative technology.">
+  <section class="tech-shell tech-hero">
+    <p class="tech-eyebrow">ICY TECH / Career materials</p>
+    <h1>Different roles.<br /><em>One body of work.</em></h1>
+    <p class="tech-lead">I build applications, AI integrations, local infrastructure, and interactive technical tools. These five role-focused résumés highlight different parts of the same independent engineering practice and my previous support work.</p>
+    <p>Independent projects are labeled separately from paid employment. The PDFs are generated from a shared, versioned source to keep claims and downloads consistent.</p>
+  </section>
+  <section class="tech-shell tech-section tech-section--work" aria-labelledby="resume-tracks-title">
+    <p class="tech-eyebrow"><span class="tech-section-number">01 /</span> Downloadable career tracks</p>
+    <h2 id="resume-tracks-title">Choose the relevant work.</h2>
+    <div class="tech-grid">
+      {profiles.map((p,index)=>(
+        <article class="tech-card">
+          <p class="tech-eyebrow">{String(index+1).padStart(2,'0')} / Résumé</p>
+          <h3>{p.title}</h3>
+          <p class="tech-muted">{p.subtitle}</p>
+          <p>{p.summary}</p>
+          <p class="tech-muted">Selected work: {p.projects.map(project=>project[0]).join(' · ')}</p>
+          <div class="tech-linkrow">
+            <a class="tech-button" href={`/resumes/${p.filename}`} download={p.filename}>Download PDF ↓</a>
+            <a href={p.page}>Explore related projects →</a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="tech-shell tech-section tech-section--quiet">
+    <p class="tech-eyebrow"><span class="tech-section-number">02 /</span> Credentials & scope</p>
+    <h2>Evidence over titles.</h2>
+    <p>My public project case studies describe implementation, tests, deployment scope, and known limitations. The Security+ study site's 519 original answers have not all been independently fact-checked; the website is separate from the local authoring system.</p>
+    <p>Collin College coursework and academic honors are listed separately from awarded credentials. Passing CompTIA A+ Core 1 is not a full A+ certification.</p>
+    <div class="tech-linkrow"><a href="/education/">Education & training →</a><a href="/projects/">Project case studies →</a><a href="mailto:Justchadham@gmail.com">Contact me →</a></div>
+  </section>
+</Layout>
