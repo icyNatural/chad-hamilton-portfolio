@@ -30,6 +30,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install PDF build dependencies
+        run: python3 -m pip install --disable-pip-version-check reportlab pypdf
+
+      - name: Generate and verify five résumé PDFs
+        run: python3 scripts/build_resumes.py
+
       - name: Build
         run: npm run build
 
