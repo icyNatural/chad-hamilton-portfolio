@@ -1,0 +1,217 @@
+[
+  {
+    "slug": "software",
+    "title": "Software Engineer",
+    "subtitle": "Full-Stack & Local-First Applications",
+    "filename": "Chad_Hamilton_Software_Engineer_Revised.pdf",
+    "page": "/software/",
+    "summary": "Software developer building local-first web tools, interactive applications, and Python/Node.js services. Ships working interfaces, reliable data flows, and automated tests across independently developed systems.",
+    "skills": [
+      [
+        "Languages & frameworks",
+        "TypeScript, JavaScript, Python, SQL, React, Astro, TanStack Start, FastAPI, Node.js, Three.js"
+      ],
+      [
+        "Storage & integrations",
+        "SQLite, IndexedDB, REST APIs, OAuth 2.0, EXIF/media processing, Ollama, WebGPU"
+      ],
+      [
+        "Delivery & QA",
+        "Git/GitHub, Vercel, Docker, Vitest, Playwright, pytest, responsive testing"
+      ]
+    ],
+    "projects": [
+      [
+        "Photogression",
+        "TypeScript, React, IndexedDB, ONNX/WebGPU",
+        "Built an offline-first photo journal with EXIF import, non-destructive backup/restore, and browser-based 2.5D depth exploration; tested with Vitest and Playwright."
+      ],
+      [
+        "Clip Factory",
+        "TypeScript, Vite, OAuth, media pipelines",
+        "Developed an in-browser editing and batch-processing workflow with media analysis, deduplication, export, and approval-gated publishing."
+      ],
+      [
+        "ICY ALL Control Plane",
+        "React, TypeScript, Node.js",
+        "Created a local service registry and controlled launcher with process diagnostics, allowlisted actions, and automated regression testing."
+      ],
+      [
+        "ICY CERT ENGINE",
+        "HTML/JavaScript, local Node/SQLite authoring",
+        "Published a standalone 519-question Security+ study site with search, bookmarks, review ratings, and mobile layout; kept local authoring tools separate from the public app."
+      ]
+    ]
+  },
+  {
+    "slug": "ai-automation",
+    "title": "AI Applications & Automation",
+    "subtitle": "Local LLM Systems",
+    "filename": "Chad_Hamilton_AI_Automation_Engineer_Revised.pdf",
+    "page": "/software/",
+    "summary": "Applied AI developer building local LLM workflows, retrieval tools, and automation services. Connects model inference, typed APIs, data stores, and operator review to practical applications.",
+    "skills": [
+      [
+        "AI & retrieval",
+        "Ollama, Qwen, ChromaDB, embeddings, semantic search, RAG, structured JSON outputs"
+      ],
+      [
+        "Development",
+        "Python, FastAPI, Pydantic, TypeScript, Node.js, SQLite, REST APIs, SSE"
+      ],
+      [
+        "Operations & testing",
+        "Docker, WSL2, n8n, PowerShell, Git, Playwright, pytest, Vitest"
+      ]
+    ],
+    "projects": [
+      [
+        "Personal Inquiry Engine",
+        "Python, FastAPI, ChromaDB, Ollama",
+        "Built a retrieval-backed investigation service with source filtering, citation handling, versioned persistence, and backend regression tests."
+      ],
+      [
+        "ICY Fabric & Mind",
+        "TypeScript, SQLite, SSE, local LLMs",
+        "Separated an event store from a bounded local reasoning service; added structured validation, citation checks, and privacy-aware outputs."
+      ],
+      [
+        "ICY Visual Lab AI",
+        "Three.js, JavaScript, Ollama",
+        "Connected schema-constrained local model output to interactive 3D scene editing and visual critiques; maintained a separate AI-free edition."
+      ],
+      [
+        "Local AI Lab Installer",
+        "PowerShell, Docker, WSL2, Ollama",
+        "Automated workstation setup, localhost service configuration, health checks, repair, and backup/restore workflows."
+      ]
+    ]
+  },
+  {
+    "slug": "cybersecurity",
+    "title": "Junior Cybersecurity Analyst",
+    "subtitle": "Security Automation",
+    "filename": "Chad_Hamilton_Cybersecurity_Analyst_Revised.pdf",
+    "page": "/security/",
+    "summary": "Cybersecurity and networking student with technical support experience and independent security-focused engineering. Builds access controls, constrained automation, auditable evidence flows, and recoverable services.",
+    "skills": [
+      [
+        "Security",
+        "Network analysis, Wireshark, Splunk, least privilege, allowlists, authentication boundaries, incident documentation"
+      ],
+      [
+        "Platforms",
+        "Windows, Linux/WSL2, TCP/IP, DNS, Docker, PowerShell, Python, TypeScript, Node.js"
+      ],
+      [
+        "Assurance",
+        "Host/Origin/CSRF checks, SHA-256 provenance, Playwright auditing, SQLite backup/restore"
+      ]
+    ],
+    "projects": [
+      [
+        "ICY ALL Control Plane",
+        "TypeScript, Node.js, Windows Job Objects",
+        "Implemented paired local access, explicit command allowlists, origin checks, and process-identity validation; built automated tests."
+      ],
+      [
+        "Personal Inquiry Engine",
+        "Python, FastAPI, SQLite",
+        "Added bounded retrieval, URL validation, source restrictions, and safe snapshot recovery to a local investigation backend."
+      ],
+      [
+        "ICY Inspector & Interface Atlas",
+        "Playwright, JavaScript, SHA-256",
+        "Developed read-only application auditing and evidence manifests for reviewing behavior without altering target systems."
+      ],
+      [
+        "ICY CERT ENGINE",
+        "Static web app; Security+ SY0-701",
+        "Published a 519-item original recall bank spanning 28 objectives. The published answers have not all received independent factual review."
+      ]
+    ]
+  },
+  {
+    "slug": "systems",
+    "title": "IT Systems Specialist",
+    "subtitle": "Support & Infrastructure",
+    "filename": "Chad_Hamilton_Systems_IT_Infrastructure_Revised.pdf",
+    "page": "/systems/",
+    "summary": "IT support professional and independent systems builder with experience troubleshooting customer technology, inventorying field assets, and automating Windows/Linux workstation operations.",
+    "skills": [
+      [
+        "Technical support",
+        "Windows 10/11, hardware diagnostics, application and account troubleshooting, asset inventory, documentation"
+      ],
+      [
+        "Infrastructure",
+        "PowerShell, Linux/WSL2, Docker, Windows Server coursework, Azure fundamentals, Microsoft 365"
+      ],
+      [
+        "Operations",
+        "TCP/IP, DNS, Tailscale, process/port diagnostics, Ollama, Git/GitHub, SQLite backups"
+      ]
+    ],
+    "projects": [
+      [
+        "Local AI Lab Installer",
+        "PowerShell, WSL2, Docker",
+        "Built repeatable installation and maintenance workflows for local AI workstations, including service checks, repair, and backup/restore."
+      ],
+      [
+        "ICY ALL Registry & Control",
+        "Node.js, TypeScript, Windows",
+        "Organized local applications and services into a monitored catalog with port diagnostics, bounded launch profiles, and process lifecycle controls."
+      ],
+      [
+        "ICY Fabric & Media",
+        "SQLite, Node.js, SHA-256",
+        "Built local event handling and content-addressed artifact storage with recoverable records and access controls."
+      ]
+    ]
+  },
+  {
+    "slug": "creative",
+    "title": "Creative Technologist",
+    "subtitle": "Interactive & Scientific Software",
+    "filename": "Chad_Hamilton_Creative_Scientific_Mobile_Revised.pdf",
+    "page": "/projects/",
+    "summary": "Cross-disciplinary developer creating interactive 3D environments, computational experiments, media instruments, and Android tools. Turns scientific and creative models into software people can explore.",
+    "skills": [
+      [
+        "Graphics & media",
+        "Three.js, WebGL2, Canvas, Web Audio, glTF/OBJ/WebM/WAV, real-time interaction"
+      ],
+      [
+        "Scientific tools",
+        "Python, NumPy, SciPy, scikit-image, OpenCV, MuJoCo, signal processing, numerical simulation"
+      ],
+      [
+        "Mobile & web",
+        "Kotlin, Jetpack Compose, Android sensors, JavaScript, TypeScript, React, SQLite, Playwright"
+      ]
+    ],
+    "projects": [
+      [
+        "Discovery Lab & Convergence",
+        "JavaScript, Python, MuJoCo, SciPy",
+        "Built inspectable numerical and physics experiments with exported trajectories, measurement artifacts, and repeatable browser tests."
+      ],
+      [
+        "ICY Visual Lab & Movement Lab",
+        "Three.js, WebGL2, TypeScript",
+        "Created a layered 3D design environment and interactive skeletal/movement studies with editable scenes and export workflows."
+      ],
+      [
+        "ICY Fieldwork",
+        "Python, FastAPI, CV/audio analysis",
+        "Developed workflows linking image regions, temporal signals, and evidence notebooks for exploring captured media."
+      ],
+      [
+        "ORIENT & Android Instruments",
+        "Kotlin, Jetpack Compose",
+        "Built offline-oriented mobile experiments using sensors, orientation, audio, and device-side interfaces."
+      ]
+    ]
+  }
+]
